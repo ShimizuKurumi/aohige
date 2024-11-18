@@ -1,0 +1,216 @@
+@charset "UTF-8";
+body {
+  background-color: #0B1632;
+  font-size: 16px;
+  font-family: "Zen Old Mincho", serif;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  color: #F9EFE1;
+}
+
+img {
+  display: block;
+}
+
+.bounce-wrapper {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid #0B1632;
+  position: fixed;
+  z-index: -1;
+}
+.bounce-wrapper #object {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  will-change: transform;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 50%;
+  -ms-filter: blur(100px);
+  opacity: 0.4;
+  filter: blur(100px);
+  background-color: #F9EFE1;
+  transform: translateX(-50%);
+}
+
+.firstView {
+  position: relative;
+}
+.firstView .mainVisual {
+  max-width: 498px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -190px;
+  position: relative;
+  z-index: 0;
+}
+.firstView .logo {
+  max-width: 88px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 4;
+  top: 32px;
+}
+.firstView .leftText {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-450px);
+}
+.firstView .leftText p:first-child,
+.firstView .leftText p:nth-child(2) {
+  background-color: #F9EFE1;
+  color: #0B1632;
+  font-size: 1.4rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.2rem 0 0.2rem 0.5rem;
+  font-weight: 400;
+}
+.firstView .leftText p:first-child span,
+.firstView .leftText p:nth-child(2) span {
+  font-weight: 600;
+}
+.firstView .leftText p:nth-child(2) {
+  padding-right: 1rem;
+  margin-top: 0.5rem;
+}
+.firstView .leftText p:last-child {
+  background-color: #0B1632;
+  color: #F9EFE1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 0.8rem;
+  padding: 4px 8px 4px 0px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.firstView .rightText {
+  position: absolute;
+  top: 70%;
+  right: 50%;
+  transform: translateX(550px);
+  font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "MS PMincho", sans-serif;
+}
+.firstView .rightText p {
+  background-color: #0B1632;
+  color: #F9EFE1;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.firstView .rightTopText {
+  writing-mode: vertical-rl;
+  color: #F9EFE1;
+}
+.firstView .rightTopText p {
+  margin-left: 0.5rem;
+}
+.firstView .rightTop {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  transform: translateX(-3%);
+}
+.firstView .rightTop img {
+  width: 94px;
+  position: relative;
+  right: 18px;
+  margin-bottom: 1rem;
+}
+.firstView .credit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  writing-mode: vertical-rl;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-370px);
+}
+.firstView .credit p {
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  letter-spacing: 0.15em;
+  margin-left: 16px;
+}
+.firstView .credit span {
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+}
+.firstView .credit span::after {
+  content: "";
+  width: 1px;
+  height: 38px;
+  background-color: #F9EFE1;
+  display: inline-block;
+  margin: 8px 0;
+}
+
+.headerPC {
+  max-width: 1232px;
+  width: 90%;
+  text-align: center;
+  padding: 2rem 0;
+  border-top: #F9EFE1 1px solid;
+  border-bottom: #F9EFE1 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+.headerPC div {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+.headerPC dt {
+  color: #C4B093;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+.headerPC dd {
+  color: #F9EFE1;
+  font-weight: 400;
+}
+
+.circleText {
+  width: 20%;
+  max-width: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -100px;
+  mix-blend-mode: difference;
+  -webkit-animation: 8s linear infinite rotation1;
+          animation: 8s linear infinite rotation1;
+}
+
+@-webkit-keyframes rotation1 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation1 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
