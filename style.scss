@@ -351,7 +351,7 @@ a {
 .introduction {
     text-align: center;
     position: relative;
-    margin-bottom: 8rem;
+    margin-bottom: 13rem;
 
     h2 {
         background-color: $text-color;
@@ -376,7 +376,7 @@ a {
 
     .text {
         position: absolute;
-        top: 35%;
+        top: 40%;
         left: 50%;
         z-index: 2;
         transform: translateX(-50%);
@@ -395,6 +395,7 @@ a {
     display: flex;
     align-items: center;
     width: 100%;
+    margin-bottom: 5rem;
 
     .bg2 {
         opacity: 0;
@@ -413,9 +414,10 @@ a {
     }
 
 
+
     .storyImg {
-        max-width: 600px;
         margin-bottom: 5rem;
+        max-width: 600px;
         width: 45%;
         height: 750px;
         position: relative;
@@ -426,14 +428,12 @@ a {
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
         }
     }
 
     .heading {
         transform: rotate(90deg) translate(50%, 50%);
         position: absolute;
-        left: 25%;
         top: -18%;
         z-index: -1;
         width: 40%;
@@ -445,7 +445,7 @@ a {
         width: 55%;
         margin-left: auto;
         margin-right: auto;
-        margin-top: -250px;
+        margin-top: -350px;
 
 
         h2 {
@@ -468,12 +468,13 @@ a {
     }
 
     100% {
-        left: 25%;
+        left: 27vw;
     }
 }
 
 .schedule {
     background: url(./images/aohige_schedule.jpg) no-repeat center/cover;
+    background-attachment: fixed;
     display: flex;
     position: relative;
 
@@ -545,4 +546,18 @@ a {
         }
     }
 
+}
+
+.access {
+    .heading {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -240px;
+    }
+
+    .accessLeft {
+        img {
+            width: 20%;
+        }
+    }
 }

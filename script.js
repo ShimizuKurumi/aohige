@@ -140,22 +140,3 @@ $(function () {
         }
     });
 });
-
-(function () {
-    // 設定
-    var interval = 5000; // 切り替わりの間隔（ミリ秒）
-    var fade_speed = 1000;// フェード処理の早さ（ミリ秒）
-    $(".storyImg img").hide();
-    $(".storyImg img:first").addClass("active").show();
-
-    var changeImage = function () {
-        var $active = $(".storyImg img.active");
-        var $next = $active.next("img").length ? $active.next("img") : $(".storyImg img:first");
-
-        $active.fadeOut(fade_speed).removeClass("active");
-        $next.fadeIn(fade_speed).addClass("active");
-    }
-
-
-    setInterval(changeImage, interval);
-}());
