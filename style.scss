@@ -23,6 +23,7 @@ a {
     /* ブラウザのデフォルトカーソルを非表示 */
 }
 
+
 /*ちょっと遅れてついてくるストーカー要素*/
 #stalker {
     position: fixed;
@@ -119,7 +120,7 @@ a {
             color: $main-color;
             font-size: 1.4rem;
             width: fit-content;
-            padding: 0.2rem 0 0.2rem 0.5rem;
+            padding: 4px 0 4px 8px;
             font-weight: 400;
 
             span {
@@ -128,15 +129,15 @@ a {
         }
 
         p:nth-child(2) {
-            padding-right: 1rem;
-            margin-top: 0.5rem;
+            padding-right: 16px;
+            margin-top: 8px;
         }
 
         p:last-child {
             background-color: $main-color;
             color: $text-color;
             width: fit-content;
-            margin-top: 0.8rem;
+            margin-top: 0.7em;
             padding: 4px 8px 4px 0px;
             font-size: 1rem;
             font-weight: 500;
@@ -154,7 +155,7 @@ a {
             background-color: $main-color;
             color: $text-color;
             font-size: 0.8rem;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.6em;
             width: fit-content;
         }
     }
@@ -165,7 +166,7 @@ a {
         color: $text-color;
 
         p {
-            margin-left: 0.5rem;
+            margin-left: 0.5em;
         }
     }
 
@@ -179,7 +180,7 @@ a {
             width: 94px;
             position: relative;
             right: 18px;
-            margin-bottom: 1rem;
+            margin-bottom: 1em;
         }
     }
 
@@ -197,7 +198,7 @@ a {
             font-size: 1.5rem;
             align-items: center;
             letter-spacing: 0.15em;
-            margin-left: 16px;
+            margin-left: 0.7em;
         }
 
         span {
@@ -210,7 +211,7 @@ a {
                 height: 38px;
                 background-color: $text-color;
                 display: inline-block;
-                margin: 8px 0;
+                margin: 0.5em 0;
             }
         }
     }
@@ -220,12 +221,12 @@ a {
     max-width: 1232px;
     width: 90%;
     text-align: center;
-    padding: 2rem 0;
+    padding: 24px 0;
     border-top: $text-color 1px solid;
     border-bottom: $text-color 1px solid;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5rem;
+    margin-bottom: 5em;
 
     div {
         width: 90%;
@@ -238,7 +239,7 @@ a {
     dt {
         color: $darkBeige;
         font-size: 1.1rem;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.3em;
     }
 
     dd {
@@ -269,19 +270,22 @@ a {
 }
 
 .subContents {
-    margin-bottom: 10rem;
+    margin-bottom: 1em;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
 
-    a {
+    .ticketbtn {
         position: relative;
         background-color: $gold ;
         padding: 32px;
-        width: 604px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
         display: flex;
         color: $main-color;
         letter-spacing: 0.12em;
+        margin-bottom: 3em;
 
 
         span {
@@ -299,6 +303,14 @@ a {
         p {
             margin-left: auto;
             margin-right: auto;
+        }
+    }
+
+    .banner {
+        width: 100%;
+
+        img {
+            width: 100%;
         }
     }
 
@@ -351,7 +363,7 @@ a {
 .introduction {
     text-align: center;
     position: relative;
-    margin-bottom: 13rem;
+    margin-bottom: 13em;
 
     h2 {
         background-color: $text-color;
@@ -360,7 +372,7 @@ a {
         margin-left: auto;
         margin-right: auto;
         font-size: 1.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1em;
     }
 
     p {
@@ -369,14 +381,14 @@ a {
 
     .bg {
         width: 100%;
-        height: 700px;
+        aspect-ratio: 16/7;
         object-fit: cover;
         object-position: 0% 30%;
     }
 
     .text {
         position: absolute;
-        top: 40%;
+        top: 42%;
         left: 50%;
         z-index: 2;
         transform: translateX(-50%);
@@ -395,7 +407,7 @@ a {
     display: flex;
     align-items: center;
     width: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 5em;
 
     .bg2 {
         opacity: 0;
@@ -416,10 +428,10 @@ a {
 
 
     .storyImg {
-        margin-bottom: 5rem;
+        margin-bottom: 5em;
         max-width: 600px;
         width: 45%;
-        height: 750px;
+        aspect-ratio: 4/5;
         position: relative;
 
         img {
@@ -427,7 +439,6 @@ a {
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
         }
     }
 
@@ -445,11 +456,11 @@ a {
         width: 55%;
         margin-left: auto;
         margin-right: auto;
-        margin-top: -350px;
+        margin-top: -20em;
 
 
         h2 {
-            margin-bottom: 1rem;
+            margin-bottom: 0.9em;
             line-height: 1.6;
             font-size: 1.5rem;
         }
@@ -480,12 +491,12 @@ a {
 
     .heading {
         margin-left: 10%;
-        margin-bottom: 5rem;
+        margin-bottom: 5em;
     }
 
     h3 {
         font-size: 1.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1em;
 
         &::before {
             content: "";
@@ -509,12 +520,12 @@ a {
 
     .caption {
         font-size: 1rem;
-        margin-top: 1rem;
+        margin-top: 1em;
         line-height: 1.8;
     }
 
     .scheduleText {
-        margin-bottom: 8rem;
+        margin-bottom: 7em;
 
         &:last-child {
             margin-bottom: 0;
@@ -523,7 +534,7 @@ a {
 
     .scheduleGroup {
         margin-left: 8%;
-        margin-top: 12rem;
+        margin-top: 12em;
     }
 
     .kagi {
@@ -535,12 +546,12 @@ a {
         justify-content: flex-end;
 
         img {
-            width: 30%;
+            width: 25%;
             object-fit: cover;
 
             &:first-child {
                 position: relative;
-                left: 130px;
+                left: 120px;
                 top: 100px;
             }
         }
@@ -549,15 +560,134 @@ a {
 }
 
 .access {
+
+    .accessMap {
+        width: 100%;
+        margin-bottom: 13em;
+    }
+
+    .inner {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .heading {
         margin-left: auto;
         margin-right: auto;
-        margin-top: -240px;
+        margin-top: -16em;
+        margin-bottom: 3em;
+    }
+
+    .accessGroup {
+        display: flex;
+        justify-content: space-between;
     }
 
     .accessLeft {
+        width: 45%;
+
         img {
-            width: 20%;
+            width: 55%;
+            margin-bottom: 1.3em;
+            max-width: 219px;
+        }
+
+        p {
+            margin-bottom: 5em;
+            width: fit-content;
+        }
+
+        .googleMapBtn {
+            border: 1px solid $text-color;
+            padding: 16px 40px;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 30px;
+                height: 1px;
+                display: inline-block;
+                background-color: $text-color;
+                position: absolute;
+                top: 50%;
+                right: -15px;
+            }
         }
     }
+
+    .accessRight {
+        width: 45%;
+        margin-bottom: 6em;
+
+        h3 {
+            margin-top: 4em;
+            font-size: 1.2rem;
+            margin-bottom: 1em;
+            font-weight: 500;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &::before {
+                content: "";
+                width: 22px;
+                height: 1px;
+                background-color: $text-color;
+                display: inline-block;
+                margin-bottom: 6px;
+                margin-right: 8px;
+            }
+        }
+
+        p {
+            line-height: 2.4;
+        }
+    }
+}
+
+.ticket {
+    background: url(./images/ticketbg.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 100vh;
+
+    .heading {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: -57px;
+    }
+
+
+    .price {
+        dt {
+            font-size: 1.3rem;
+            margin-bottom: 0.5em;
+        }
+
+        dd {
+            font-size: 2rem;
+            margin-bottom: 0.5em;
+
+            span {
+                font-size: 3rem;
+            }
+        }
+
+        dl {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+}
+
+.trigger {
+    width: 1px;
+    height: 1px;
+    background-color: $main-color;
 }

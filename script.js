@@ -140,3 +140,20 @@ $(function () {
         }
     });
 });
+
+$(window).scroll(function () {
+    // A要素までの距離を取得
+    var $target = $('.access');
+    var targetOffset = $target.offset().top;
+
+    // ウィンドウのスクロール量を取得
+    var scroll = $(window).scrollTop();
+
+    // A要素の位置を超えたらB要素のtransform: translateYを変更
+    if (scroll >= targetOffset) {
+        // B要素の選択子を変更してください
+        $('.ticket').css({
+            'transform': 'translateY(-' + (scroll - targetOffset - 900) + 'px)'
+        });
+    }
+});

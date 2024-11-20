@@ -118,7 +118,7 @@
         </header>
         <main>
             <section class="subContents">
-                <a href="#">
+                <a href="#" class="ticketbtn">
                     <p><span>チケット購入</span>はこちら</p>
                     <div class="border">
                         <div class="triangle_left-top triangle"></div>
@@ -127,6 +127,10 @@
                         <div class="triangle_right-bottom triangle"></div>
                     </div>
                     <img src="./images/right-arrow.svg" alt="" class="right-arrow">
+                </a>
+
+                <a href="" class="banner">
+                    <img src="./images/banner.png" alt="">
                 </a>
             </section>
 
@@ -193,13 +197,46 @@
 
             </section>
 
-            <section class="access">
+
+            <section class="access section">
                 <img src="./images/2x/access@2x.png" alt="" class="heading">
 
-                <div class="accessGroup">
-                    <div class="accessLeft">
-                        <img src="./images/taigenteikokukanlogo_yoko.png" alt="">
+                <div class="inner">
+                    <div class="accessGroup">
+                        <div class="accessLeft">
+                            <img src="./images/taigenteikokukanlogo_yoko.png" alt="">
+                            <p>〒457-0862 愛知県名古屋市南区内田橋 1-6-10 1F</p>
+                            <a href="#" class="googleMapBtn">Google Map</a>
+                        </div>
+
+                        <div class="accessRight">
+                            <h3>近辺からお越しの方</h3>
+                            <p>地下鉄名城線 [熱田神宮伝馬町駅]③番出口より 徒歩10分<br>
+                                名鉄 [豊田本町駅]改札より 徒歩5分<br>
+                                市バス [内田橋バス停]より 徒歩3分</p>
+
+                            <h3>遠方からお越しの方</h3>
+                            <p>東京 [東京駅]より 約2時間<br>
+                                大阪 [大阪駅]より 約1時間40分</p>
+
+                            <h3>備考</h3>
+                            <p>東建物の隣にコインパーキング有</p>
+
+                        </div>
                     </div>
+
+                    <img src="./images/tizu.png" alt="" class="accessMap">
+                </div>
+            </section>
+            <section class="ticket section">
+                <img src="./images/2x/ticket@2x.png" alt="" class="heading">
+
+                <div class="price">
+                    <dl>
+                        <dt>前売券／当日券／ドネチケ</dt>
+                        <dd><span>4,000</span>円</dd>
+                    </dl>
+                    <p>※全席自由席。ツケ払い可。ドネチケ有。</p>
                 </div>
             </section>
         </main>
@@ -208,8 +245,11 @@
     </div>
     <script src="./jquery-3.7.1.min.js"></script>
     <script src="./luxy.min.js"></script>
-    <script src="./rellax.min.js"></script>
+    <script src="./jquery.stickystack.min.js"></script>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </body>
 
 </html>
