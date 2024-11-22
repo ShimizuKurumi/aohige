@@ -81,21 +81,12 @@ $(function () {
     vAnimate();
 });
 
-// スクロールイベント
-window.addEventListener('scroll', () => {
-    // visualVerticalImgのid名がつく画像を取得
-    const elemImg = document.getElementById('visualVerticalImg');
-    //現在のスクロール位置を取得して10で除算
-    let imgVerScrollY = window.scrollY / 10;
-    //取得したスクロール値でY値をtransform
-    elemImg.style.transform = 'translateY(' + 0 + imgVerScrollY + 'px) scale(1.4)';
-});
 
 // var rellax = new Rellax('.rellax');
 
 luxy.init({
     wrapper: '#luxy',
-    wrapperSpeed: 0.09, // スクロール速度の調整（デフォルト値は0.08）
+    wrapperSpeed: 0.1, // スクロール速度の調整（デフォルト値は0.08）
 });
 
 
@@ -139,21 +130,72 @@ $(function () {
 
         }
     });
+
+    $("button").on({
+        "mouseenter": function () {
+            //activeクラス付与
+            cursor.addClass("active");
+            stalker.addClass("active");
+        },
+        "mouseleave": function () {
+            cursor.removeClass("active");
+            stalker.removeClass("active");
+
+        }
+    });
+
 });
 
-$(window).scroll(function () {
-    // A要素までの距離を取得
-    var $target = $('.access');
-    var targetOffset = $target.offset().top;
-
-    // ウィンドウのスクロール量を取得
-    var scroll = $(window).scrollTop();
-
-    // A要素の位置を超えたらB要素のtransform: translateYを変更
-    if (scroll >= targetOffset) {
-        // B要素の選択子を変更してください
-        $('.ticket').css({
-            'transform': 'translateY(-' + (scroll - targetOffset - 900) + 'px)'
-        });
-    }
+$(function () {
+    $('.acChild').css("display", "none");
+    $('.acParentTuke').on('click', function () {
+        $(this).next().slideToggle();
+        $(".arrowClick").toggleClass("active");
+    })
 });
+
+$(function () {
+    $('.acChild').css("display", "none");
+    $('.acParentDone').on('click', function () {
+        $(this).next().slideToggle();
+        $(".arrowClick2").toggleClass("active2");
+    })
+});
+
+// 着火点となる要素
+const headings = document.querySelectorAll('.target');
+
+const options = {
+    threshold: 1
+};
+
+// 実行するよ
+const observer = new IntersectionObserver(showElements);
+
+// 各 .heading に到達したら発動。複数あるから forEach 使うよ。
+headings.forEach(heading => {
+    observer.observe(heading);
+});
+
+// 要素が表示されたら実行する動作
+function showElements(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // 各 .heading に .active を加える
+            entry.target.classList.add('active');
+        }
+    });
+};
+
+function isMobile() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+}
+
+if (isMobile()) {
+    console.log('モバイル端末です');
+    $('#stalker').css('display', 'none');
+
+} else {
+    console.log('PCです');
+}
