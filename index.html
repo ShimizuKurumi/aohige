@@ -7,7 +7,7 @@
     <title>見えない青髭公の城</title>
     <link rel="stylesheet" href="./destyle.css">
     <link rel="stylesheet" href="./style.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel=" preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap"
         rel="stylesheet">
@@ -17,57 +17,51 @@
     <div id="cursor"></div>
     <img src="./images/cursor.png" alt="" id="stalker">
 
-    <div class="bounce-wrapper">
-        <div id="object"></div>
-    </div>
-
     <div id="luxy">
 
+        <div class="bounce-wrapper">
+            <div id="object"></div>
+        </div>
+
         <!-- ファーストビュー -->
-        <section class="p-firstview p-firstview--mobile">
-            <div class="p-firstview__taigen-performance p-firstview__taigen-performance--mobile">
-                <p class="p-firstview__taigen-performance-text">体現帝国館 こけら落とし公演<br>体現帝国 第十二回公演</p>
-                <img src="./images/taigenlogo.png" alt="体現帝国ロゴ" class="p-firstview__taigenlogo">
-            </div>
 
-            <h1 class="p-firstview__logo"><img src="./images/logo.png" alt="見えない青髭公の城" class="p-firstview__logo-img">
-            </h1>
-            <img src="./images/2x/mainVisual@2x.png" alt="メイン画像" class="p-firstview__main_visual">
-            <img src="./images/2x/circle_text@2x.png" alt="" class="p-firstview__circletext">
-        </section>
+        <section class="p-firstview">
+            <div class="p-firstview__inner">
+                <div class="p-firstview__taigen-performance">
+                    <p class="p-firstview__taigen-performance__text">体現帝国館 こけら落とし公演<br>体現帝国 第十二回公演</p>
+                    <img src="./images/taigenlogo.png" alt="体現帝国ロゴ" class="p-firstview__taigenlogo">
+                </div>
 
-        <section class="p-firstview p-firstview--pc">
-            <div class="p-firstview__taigen-performance p-firstview__taigen-performance--pc">
-                <p class="p-firstview__taigen-performance__text">体現帝国館 こけら落とし公演<br>体現帝国 第十二回公演</p>
-                <img src="./images/taigenlogo.png" alt="体現帝国ロゴ" class="p-firstview__taigenlogo">
-            </div>
+                <img src="./images/logo.png" alt="見えない青髭公の城" class="p-firstview__aohigelogo">
+                <img src="./images/2x/mainVisual@2x.png" alt="メイン画像" class="p-firstview__main_visual">
+                <img src="./images/2x/circle_text@2x.png" alt="" class="p-firstview__circletext">
 
-            <img src="./images/logo.png" alt="見えない青髭公の城">
-            <img src="./images/2x/mainVisual@2x.png" alt="メイン画像" class="p-firstview__main_visual">
-            <img src="./images/2x/circle_text@2x.png" alt="" class="p-firstview__circletext">
+                <section class="c-detail c-detail--pc">
+                    <div class="c-detail__time">
+                        <p class="c-detail__time__text"><span class="c-detail__time__bold">2025年4月~6月</span>の3ヶ月間、</p>
+                        <p class="c-detail__time__text"><span class="c-detail__time__bold">毎週土曜夜19時30分</span>開演</p>
+                        <small class="c-detail__time__attention">※5月31日（土）のみ休演。</small>
+                    </div>
 
-            <div class="p-firstview__time">
-                <p class="p-firstview__time__text">2025年4月~6月の3ヶ月間、</p>
-                <p class="p-firstview__time__text">毎週土曜夜19時30分開演</p>
-                <small class="p-firstview__time__attention">※5月31日（土）のみ休演。</small>
-            </div>
+                    <div class="c-detail__english">
+                        <p class="c-detail__english-text">On this day, the "warehouse" becomes a "theater,"</p>
+                        <p class="c-detail__english-text">the "theater" becomes "Bluebeard's castle," and</p>
+                        <p class="c-detail__english-text">"Bluebeard's castle" becomes the "Japan" we know so well.</p>
+                    </div>
 
-            <div class="p-firstview__english">
-                <p class="p-firstview__english-text">On this day, the "warehouse" becomes a "theater,"</p>
-                <p class="p-firstview__english-text">the "theater" becomes "Bluebeard's castle," and</p>
-                <p class="p-firstview__english-text">"Bluebeard's castle" becomes the "Japan" we know so well.</p>
-            </div>
+                    <div class="c-detail__credit">
+                        <dl class="c-detail__credit__list">
+                            <dt class="c-detail__credit__job">演出</dt>
+                            <dd class="c-detail__credit__name">渡部剛己</dd>
+                        </dl>
 
-            <div class="p-firstview__credit">
-                <dl class="p-firstview__credit__list">
-                    <dt class="p-firstview__credit__job">演出</dt>
-                    <dd class="p-firstview__credit__name">渡部剛己</dd>
-                </dl>
+                        <dl class="c-detail__credit-list">
+                            <dt class="c-detail__credit__job">音楽</dt>
+                            <dd class="c-detail__credit__name">赤木萌絵</dd>
+                        </dl>
+                    </div>
 
-                <dl class="p-firstview__credit-list">
-                    <dt class="p-firstview__credit__job">音楽</dt>
-                    <dd class="p-firstview__credit__name">赤木萌絵</dd>
-                </dl>
+                </section>
             </div>
         </section>
 
@@ -159,30 +153,77 @@
         </header>
 
 
+        <!-- 詳細 -->
+        <section class="c-detail">
+            <div class="c-detail__inner">
+                <div class="c-detail__time">
+                    <p class="c-detail__time__text"><span class="c-detail__time__bold">2025年4月~6月</span>の3ヶ月間、</p>
+                    <p class="c-detail__time__text"><span class="c-detail__time__bold">毎週土曜夜19時30分</span>開演</p>
+                    <small class="c-detail__time__attention">※5月31日（土）のみ休演。</small>
+                </div>
+
+                <div class="c-detail__credit">
+                    <dl class="c-detail__credit__list">
+                        <dt class="c-detail__credit__job">演出</dt>
+                        <dd class="c-detail__credit__name">渡部剛己</dd>
+                    </dl>
+
+                    <dl class="c-detail__credit__list">
+                        <dt class="c-detail__credit__job">音楽</dt>
+                        <dd class="c-detail__credit__name">赤木萌絵</dd>
+                    </dl>
+                </div>
+
+                <div class="c-detail__english">
+                    <p class="c-detail__english-text">On this day, the "warehouse" becomes a "theater,"</p>
+                    <p class="c-detail__english-text">the "theater" becomes "Bluebeard's castle," and</p>
+                    <p class="c-detail__english-text">"Bluebeard's castle" becomes the "Japan" we know</p>
+                    <p class="c-detail__english-text">so well.</p>
+
+                </div>
+
+            </div>
+        </section>
+
         <!-- バナー -->
         <section class="p-banner">
-            <button class="c-button c-button--ticket"><span class="c-button--ticket__decoration">チケット購入</span>はこちら
-                <img src="./images/right-arrow.svg" alt="" class="c-button--ticket__img"></button>
+            <div class="p-banner__inner">
+                <button class="c-button c-button--ticket"><a href="#" class="c-button__link"><img src="./images/btn.png"
+                            alt="" class="c-button__img"></a></button>
 
-            <img src="./images/banner.png" alt="バナー" class="p-banner--1">
-            <img src="./images/banner.png" alt="バナー" class="p-banner--2">
+                <img src="./images/banner.png" alt="バナー" class="p-banner--1">
+                <img src="./images/banner.png" alt="バナー" class="p-banner--2">
+            </div>
         </section>
 
 
         <!-- イントロダクション -->
         <section class="p-introduction">
-            <h2 class="p-introduction__head p-introduction__head--intro"><img src="./images/2x/intro@2x.png"
-                    alt="イントロダクション" class="p-introduction__head-img"></h2>
+            <h2 class="p-introduction__head p-introduction__head--intro">
+                <img src="./images/2x/intro@2x.png" alt="イントロダクション"
+                    class="p-introduction__head-img p-introduction__head-img--intro">
+            </h2>
 
-            <h3 class="p-introduction__title">いま、新たな幕が上がる。</h3>
-            <p class="p-introduction__text">2024年1月より<br>名古屋市南区にある倉庫を借り、<br>
-                改装を続けてきた<br>体現帝国の専用劇場『体現帝国館』。<br>
-                そのこけら落とし公演が上演されます。<br>
-                本番と同じ充実した劇場環境で<br>稽古を重ねてきた<br>
-                本作の上演にご期待ください。</p>
+
+
+            <div class="p-introduction__text-and-img">
+                <div class="p-introduction__text-group">
+                    <h3 class="p-introduction__title">いま、新たな幕が上がる。</h3>
+                    <p class="p-introduction__text">2024年1月より<br>名古屋市南区にある倉庫を借り、<br>
+                        改装を続けてきた<br>体現帝国の専用劇場『体現帝国館』。<br>
+                        そのこけら落とし公演が上演されます。<br>
+                        本番と同じ充実した劇場環境で<br>稽古を重ねてきた<br>
+                        本作の上演にご期待ください。</p>
+                </div>
+
+
+                <div class="p-introduction__bg-wrapper ">
+                    <div class="p-introduction__bg luxy-el" data-speed-y="3" data-offset="-150"></div>
+                </div>
+            </div>
 
             <h2 class="p-introduction__head p-introduction__head--duction"><img src="./images/2x/duction@2x.png"
-                    alt="イントロダクション" class="p-introduction__head-img">
+                    alt="イントロダクション" class="p-introduction__head-img p-introduction__head-img--duction">
             </h2>
         </section>
 
@@ -190,13 +231,15 @@
         <!-- ストーリー -->
         <section class="p-story">
             <div class="p-story__img-and-head">
-                <img src="./images/aohige_story1.jpg" alt="劇中の写真" class="">
-                <h2 class="p-story__head"><img src="./images/2x/story@2x.png" alt="ストーリー" class="p-story__head-img">
+                <img src="./images/aohige_story1.jpg" alt="劇中の写真" class="p-story__img luxy-el" data-speed-y="3"
+                    data-offset="-150">
+                <h2 class="p-story__head"><img src="./images/2x/story@2x.png" alt="ストーリー"
+                        class="p-story__head-img target">
                 </h2>
             </div>
 
             <h3 class="p-story__title">グリム童話『青髭』を元に創られる<br>
-                童話と現代が重なるダークメルヘン劇。</h3>
+                童話と現代が重なる<span class="bw">ダークメルヘン劇。</span></h3>
             <p class="p-story__text">
                 青髭公の城にやってきた盲目の少女ユディット。「見ること」「見えないこと」「見過ぎてしまったこと」「見てはいけないこと」「見せてくれないこと」「見たくないこと」「見せられてしまうこと」『見る』をテーマに演劇の魔法をふんだんに織り交ぜて劇は展開する。この日、“倉庫”は“劇場”となり、“劇場”は“青髭公の城”となり、“青髭公の城”は私たちのよく知る“日本”となる。
             </p>
@@ -205,113 +248,148 @@
 
         <!-- スケジュール -->
         <section class="p-schedule">
-            <div class="p-schedule__kagi">
-                <img src="./images/kagi.png" alt="" class="p-schedule__kagi--1">
-                <img src="./images/kagi2.png" alt="" class="p-schedule__kagi--2">
+            <div class="p-schedule__kagi luxy-el" data-speed-y="3" data-offset="-180">
+                <img src="./images/kagi2.png" alt="" class="p-schedule__kagi--1">
+                <img src="./images/kagi.png" alt="" class="p-schedule__kagi--2">
+
             </div>
 
-            <h2 class="p-schedule__head"><img src="./images/2x/SCHEDULE@2x.png" alt="スケジュール"
-                    class="p-schedule__head-img">
-            </h2>
-            <div class="p-schedule__text-group">
-                <h3 class="p-schedule__title">日時</h3>
-                <p class="p-schedule__text">2025年4月~6月の3ヶ月間、
-                    毎週土曜夜19時30分開演。</p>
-                <small class="p-schedule__attention">※5月31日（土）のみ休演させていただきます。</small>
 
-                <h3 class="p-schedule__title">備考</h3>
-                <small class="p-schedule__attention">※上演時間90分を予定。開演10分前より受付開始。</small>
-                <small class="p-schedule__attention">※各日21:00頃より公演打ち上げを開催します。どなたも御参加ください。</small>
+            <div class="p-schedule__content">
+                <h2 class="p-schedule__head"><img src="./images/2x/SCHEDULE@2x.png" alt="スケジュール"
+                        class="p-schedule__head-img">
+                </h2>
+                <div class="p-schedule__text-group">
+                    <h3 class="p-schedule__title">日時</h3>
+                    <p class="p-schedule__text"><span class="p-schedule__bold">2025年4月~6月</span>の3ヶ月間、<br>
+                        <span class="p-schedule__bold">毎週土曜夜19時30分</span>開演。
+                    </p>
+                    <small class="p-schedule__attention">※5月31日（土）のみ休演させていただきます。</small>
+
+                    <h3 class="p-schedule__title">備考</h3>
+                    <small class="p-schedule__attention">※上演時間90分を予定。開演10分前より受付開始。</small>
+                    <small class="p-schedule__attention">※各日21:00頃より公演打ち上げを開催します。どなたも御参加ください。</small>
+                </div>
+            </div>
+
+            <div class="p-schedule__bg-wrapper">
+                <div class="p-schedule__bg"></div>
             </div>
         </section>
 
 
         <!-- アクセス -->
         <section class="p-access">
-            <h2 class="p-access__head"><img src="./images/2x/access@2x.png" alt="アクセス" class="p-access__head-img">
-            </h2>
+            <div class="p-access__inner">
+                <h2 class="p-access__head luxy-el" data-speed-y="3" data-offset="-180"><img
+                        src="./images/2x/access@2x.png" alt="アクセス" class="p-access__head-img">
+                </h2>
 
-            <div class="p-access__theater">
-                <img src="./images/taigenteikokukanlogo_yoko.png" alt="体現帝国館" class="p-access__taigenteikoukan">
-                <p class="p-access__address">〒457-0862 愛知県名古屋市南区内田橋 1-6-10 1F</p>
-                <button class="c-button c-button--map"><a href="#" class="c-button__link">Google Map</a></button>
+
+                <div class="p-access__contents">
+                    <div class="p-access__theater">
+                        <img src="./images/taigenteikokukanlogo_yoko.png" alt="体現帝国館" class="p-access__taigenteikoukan">
+                        <p class="p-access__address">〒457-0862 愛知県名古屋市南区内田橋 1-6-10 1F</p>
+                        <a href="#" class="c-button__link c-button__link--map">Google
+                            Map</a>
+                    </div>
+
+                    <div class="p-access__transit">
+                        <h3 class="p-access__title">近辺からお越しの方</h3>
+                        <p class="p-access__description">地下鉄名城線［熱田神宮伝馬町駅］③番出口より徒歩10分<br>
+                            名鉄［豊田本町駅］改札より徒歩5分<br>
+                            市バス［内田橋バス停］より徒歩3分</p>
+
+                        <h3 class="p-access__title">遠方からお越しの方</h3>
+                        <p class="p-access__description">東京［東京駅］より約2時間<br>
+                            大阪［大阪駅］より約1時間40分</p>
+
+                        <h3 class="p-access__title">備考</h3>
+                        <p class="p-access__description">建物の隣にコインパーキング有</p>
+                    </div>
+                </div>
+
+                <img src="./images/2x/tizu@2x.png" alt="アクセスマップ" class="p-access__map-img">
             </div>
-
-            <div class="p-access__transit">
-                <h3 class="p-access__title">近辺からお越しの方</h3>
-                <p class="p-access__description">地下鉄名城線［熱田神宮伝馬町駅］③番出口より徒歩10分
-                    名鉄［豊田本町駅］改札より徒歩5分
-                    市バス［内田橋バス停］より徒歩3分</p>
-
-                <h3 class="p-access__title">遠方からお越しの方</h3>
-                <p class="p-access__description">東京［東京駅］より約 2 時間
-                    大阪［大阪駅］より約1時間40分</p>
-
-                <h3 class="p-access__title">備考</h3>
-                <p class="p-access__description">建物の隣にコインパーキング有</p>
-            </div>
-
-            <img src="./images/2x/tizu@2x.png" alt="アクセスマップ" class="p-access__map-img">
         </section>
 
 
         <!-- チケット -->
         <section class="p-ticket">
-            <h2 class="p-ticket__head"><img src="./images/2x/ticket@2x.png" alt="チケット" class="p-ticket__head-img">
-            </h2>
+            <div class="p-ticket__inner">
+                <h2 class="p-ticket__head"><img src="./images/2x/ticket@2x.png" alt="チケット" class="p-ticket__head-img">
+                </h2>
 
-            <p class="p-ticket__category">前売券／当日券／ドネチケ</p>
-            <p class="p-ticket__price"><span class="p-ticket__price-number">4000</span>円</p>
-            <small class="">※ツケ払い可。ドネチケ利用で500円貰って観劇可。</small>
+                <p class="p-ticket__category">前売券／当日券／ドネチケ</p>
+                <p class="p-ticket__price"><span class="p-ticket__price-number">4000</span>円</p>
+                <small class="p-ticket__attention">※ツケ払い可。ドネチケ利用で500円貰って<span class="bw">観劇可。</span></small>
 
-            <div class="p-ticket__means">
-                <button class="c-button--means">ツケ払いとは?<img src="./images/accordion.svg" alt=""
-                        class="c-button--means__img"></button>
+                <div class="p-ticket__means">
 
-                <button class="c-button--means">ドネチケとは?<img src="./images/accordion.svg" alt=""
-                        class="c-button--means__img"></button>
-            </div>
+                    <div class="c-button--means__wrapper">
+                        <button class="c-button--means c-button--tukebarai">ツケ払いとは?<img src="./images/accordion.svg"
+                                alt="" class="c-button--means__img"></button>
+                        <div class="c-button--means__contents c-button--means__contents--tukabarai">
+                            <p>あ</p>
+                        </div>
+                    </div>
 
-            <div class="p-ticket__purchase">
-                <h3 class="p-ticket__purchase__title">PassMarketにて<br>
-                    前売券を御購入いただけます。</h3>
-                <p class="p-ticket__purchase__text">PassMarketでの購入が難しいという場合はお問い合わせください。
-                    公演当日御来館いただければ、当日券も毎ステージ数枚はございます。</p>
+                    <div class="c-button--means__wrapper">
+                        <button class="c-button--means  c-button--donetike">ドネチケとは？<img src="./images/accordion.svg"
+                                alt="" class="c-button--means__img"></button>
+                        <div class="c-button--means__contents--donetike c-button--means__contents">
+                            <p>あ</p>
+                        </div>
+                    </div>
+                </div>
 
-                <button class="c-button c-button--ticket"><span class="c-button--ticket__decoration">チケット購入</span>はこちら
-                    <img src="./images/right-arrow.svg" alt="" class="c-button--ticket__img"></button>
-                <small class="p-ticket__purchase__attention">※PassMarketが開きます。</small>
-            </div>
+                <div class="p-ticket__purchase">
+                    <h2 class="p-ticket__bigtitle">チケット購入</h2>
+                    <h3 class="p-ticket__title">PassMarketにて<br>
+                        前売券を御購入<span class="bw">いただけます。</span></h3>
+                    <p class="p-ticket__text">PassMarketでの購入が難しいという場合はお問い合わせください。<br class="br-pc">
+                        公演当日御来館いただければ、当日券も毎ステージ数枚はございます。</p>
 
-            <div class="p-ticket__relation">
-                <h3 class="p-ticket__relation__title">試演会<br>
-                    『まだまだ見えない青髭公の城』</h3>
+                    <button class="c-button c-button--ticket"><a href="#" class="c-button__link"><img
+                                src="./images/btn.png" alt="" class="c-button__img"></a></button> <small
+                        class="p-ticket__purchase__attention p-ticket__attention">※PassMarketが開きます。</small>
+                </div>
 
-                <p class="p-ticket__relation__text">本公演一ヶ月前に試演会を開催します。
-                    この試演会を通して本公演の品質向上に繋げます。実験性の高い挑戦にお立会いください。</p>
+                <div class="p-ticket__relation">
+                    <h2 class="p-ticket__bigtitle p-ticket__bigtitle--2">関連企画</h2>
 
-                <table class="p-ticket__relation__table">
-                    <tbody>
-                        <tr class="p-ticket__relation__table-column">
-                            <td class="p-ticket__relation__table-cell">日時</td>
-                            <td class="p-ticket__relation__table-cell">料金</td>
-                            <td class="p-ticket__relation__table-cell">場所</td>
-                        </tr>
-                        <tr class="p-ticket__relation__table-column">
-                            <td class="p-ticket__relation__table-cell">2025年3月1日（土）
-                                19:30~</td>
-                            <td class="p-ticket__relation__table-cell">2000円</td>
-                            <td class="p-ticket__relation__table-cell">体現帝国館
-                                GoogleMap→</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <h3 class="p-ticket__title">試演会<br>
+                        『まだまだ見えない<span class="bw">青髭公の城』</span></h3>
 
-                <small class="p-ticket__relation__attention">※上演時間90分を予定。開演10分前より受付開始。</small>
+                    <p class="p-ticket__text">本公演一ヶ月前に試演会を開催します。
+                        この試演会を通して本公演の品質向上に繋げます。実験性の高い挑戦にお立会いください。</p>
 
-                <button class="c-button c-button--ticket"><span class="c-button--ticket__decoration">チケット購入</span>はこちら
-                    <img src="./images/right-arrow.svg" alt="" class="c-button--ticket__img"></button>
-                <small class="p-ticket__purchase__attention">※PassMarketが開きます。</small>
+                    <table class="p-ticket__relation__table">
+                        <tbody>
+                            <tr class="p-ticket__relation__table-column">
+                                <th class="p-ticket__relation__table-head">日時</td>
+                                <td class="p-ticket__relation__table-cell">2025年3月1日（土）
+                                    19:30~</td>
+                            </tr>
+                            <tr class="p-ticket__relation__table-column">
+                                <th class="p-ticket__relation__table-head">料金</td>
+                                <td class="p-ticket__relation__table-cell">2000円</td>
+                            </tr>
+                            <tr class="p-ticket__relation__table-column">
+                                <th class="p-ticket__relation__table-head">場所</td>
+                                <td class="p-ticket__relation__table-cell">体現帝国館<a class="p-ticket__link">GoogleMap→</a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <small class="p-ticket__relation__attention p-ticket__attention">※上演時間90分を予定。開演10分前より受付開始。</small>
+
+                    <button class="c-button c-button--ticket"><a href="#" class="c-button__link"><img
+                                src="./images/btn.png" alt="" class="c-button__img"></a></button> <small
+                        class="p-ticket__attention">※PassMarketが開きます。</small>
+                </div>
             </div>
         </section>
 
@@ -333,6 +411,30 @@
                         登場人物たちが隠す秘密や嘘が徐々に明らかになるたび、息を飲む展開に。観客もまた一緒に謎を解き明かす探偵のような気分にさせられ、終盤に向けての予想外の展開には鳥肌が立ちました。照明や音響も絶妙で、暗闇に潜む恐怖や緊迫感をリアルに感じることができました。全体的に計算され尽くした構成と演出で、観る者の心を掴む素晴らしい舞台でした。
                     </p>
                 </div>
+
+                <div class="p-comment__card">
+                    <dl class="p-comment__info">
+                        <dt class="p-comment__info--name">仮の名前</dt>
+                        <dd class="p-comment__info--job">舞台演出家</dd>
+                    </dl>
+
+                    <h3 class="p-comment__title">観劇を通して、緊張感と驚きの連続に引き込まれました。</h3>
+                    <p class="p-comment__text">
+                        登場人物たちが隠す秘密や嘘が徐々に明らかになるたび、息を飲む展開に。観客もまた一緒に謎を解き明かす探偵のような気分にさせられ、終盤に向けての予想外の展開には鳥肌が立ちました。照明や音響も絶妙で、暗闇に潜む恐怖や緊迫感をリアルに感じることができました。全体的に計算され尽くした構成と演出で、観る者の心を掴む素晴らしい舞台でした。
+                    </p>
+                </div>
+                <div class="p-comment__card">
+                    <dl class="p-comment__info">
+                        <dt class="p-comment__info--name">仮の名前</dt>
+                        <dd class="p-comment__info--job">舞台演出家</dd>
+                    </dl>
+
+                    <h3 class="p-comment__title">観劇を通して、緊張感と驚きの連続に引き込まれました。</h3>
+                    <p class="p-comment__text">
+                        登場人物たちが隠す秘密や嘘が徐々に明らかになるたび、息を飲む展開に。観客もまた一緒に謎を解き明かす探偵のような気分にさせられ、終盤に向けての予想外の展開には鳥肌が立ちました。照明や音響も絶妙で、暗闇に潜む恐怖や緊迫感をリアルに感じることができました。全体的に計算され尽くした構成と演出で、観る者の心を掴む素晴らしい舞台でした。
+                    </p>
+                </div>
+
             </div>
         </section>
 
@@ -340,8 +442,8 @@
         <section class="p-movie">
             <h2 class="p-movie__head"><img src="./images/2x/movie@2x.png" alt="ムービー" class="p-movie__head-img"></h2>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/6uZU28KITWU?si=bjQI7ofcOEFmvGzw"
-                title="YouTube video player" frameborder="0"
+            <iframe src="https://www.youtube.com/embed/6uZU28KITWU?si=bjQI7ofcOEFmvGzw" title="YouTube video player"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -349,79 +451,87 @@
         </section>
 
         <section class="p-attention">
-            <h3 class="p-attention__head">御来館の皆さまへお願い</h3>
-            <p class="p-attention__text">
-                体現帝国館は地域の方々の御協力があって運営できています。舞台芸術を愛する皆様が継続して舞台を楽しみ、その輪を広げていく為に、路上駐車や近隣施設への無断駐車、ゴミのポイ捨て、深夜の大声での会話等は御遠慮願います。
-            </p>
+            <div class="p-attention__inner">
+                <h3 class="p-attention__head">御来館の皆さまへお願い</h3>
+                <p class="p-attention__text">
+                    体現帝国館は地域の方々の御協力があって運営できています。舞台芸術を愛する皆様が継続して舞台を楽しみ、その輪を広げていく為に、路上駐車や近隣施設への無断駐車、ゴミのポイ捨て、深夜の大声での会話等は御遠慮願います。
+                </p>
+            </div>
         </section>
 
 
+        <!-- フッター -->
         <footer class="l-footer">
-            <div class="l-footer__group l-footer__group--menu">
-                <h3 class="l-footer__group__head">MENU</h3>
-                <dl class="l-nav l-nav--footer">
-                    <a href="#" class="l-nav__link">
-                        <dt class="l-nav__item--english l-nav__item"></dt>
-                        <dd class="l-nav__item--japanese l-nav__item"></dd>
-                    </a>
+            <div class="l-footer__inner">
 
-                    <a href="#" class="l-nav__link">
-                        <dt class="l-nav__item--english l-nav__item"></dt>
-                        <dd class="l-nav__item--japanese l-nav__item"></dd>
-                    </a>
+                <h2 class="l-footer__logo"><img src="./images/logo.png" alt="" class="l-footer__logo-img"></h2>
 
-                    <a href="#" class="l-nav__link">
-                        <dt class="l-nav__item--english l-nav__item"></dt>
-                        <dd class="l-nav__item--japanese l-nav__item"></dd>
-                    </a>
+                <div class="l-footer__group l-footer__group--menu">
+                    <h3 class="l-footer__group__head">MENU</h3>
+                    <dl class="l-nav l-nav--footer">
+                        <a href="#" class="l-nav__link">
+                            <dt class="l-nav__item--english l-nav__item">INTRODUCTION</dt>
+                            <dd class="l-nav__item--japanese l-nav__item">イントロダクション</dd>
+                        </a>
 
-                    <a href="#" class="l-nav__link">
-                        <dt class="l-nav__item--english l-nav__item"></dt>
-                        <dd class="l-nav__item--japanese l-nav__item"></dd>
-                    </a>
+                        <a href="#" class="l-nav__link">
+                            <dt class="l-nav__item--english l-nav__item">STORY</dt>
+                            <dd class="l-nav__item--japanese l-nav__item">ストーリー</dd>
+                        </a>
 
-                    <a href="#" class="l-nav__link">
-                        <dt class="l-nav__item--english l-nav__item"></dt>
-                        <dd class="l-nav__item--japanese l-nav__item"></dd>
-                    </a>
+                        <a href="#" class="l-nav__link">
+                            <dt class="l-nav__item--english l-nav__item">SCHEDULE</dt>
+                            <dd class="l-nav__item--japanese l-nav__item">スケジュール</dd>
+                        </a>
 
-                    <a href="#" class="l-nav__link">
-                        <dt class="l-nav__item--english l-nav__item"></dt>
-                        <dd class="l-nav__item--japanese l-nav__item"></dd>
-                    </a>
+                        <a href="#" class="l-nav__link">
+                            <dt class="l-nav__item--english l-nav__item">ACCESS</dt>
+                            <dd class="l-nav__item--japanese l-nav__item">アクセス</dd>
+                        </a>
 
-                    <a href="#" class="l-nav__link">
-                        <dt class="l-nav__item--english l-nav__item"></dt>
-                        <dd class="l-nav__item--japanese l-nav__item"></dd>
-                    </a>
+                        <a href="#" class="l-nav__link">
+                            <dt class="l-nav__item--english l-nav__item">COMMENT</dt>
+                            <dd class="l-nav__item--japanese l-nav__item">コメント</dd>
+                        </a>
 
-                </dl>
-            </div>
+                        <a href="#" class="l-nav__link">
+                            <dt class="l-nav__item--english l-nav__item">MOVIE</dt>
+                            <dd class="l-nav__item--japanese l-nav__item">動画</dd>
+                        </a>
 
-            <div class="l-footer__group l-footer__group--contact">
-                <h3 class="l-footer__group__head">CONTACT</h3>
-                <p class="l-footer__group__text">Mail : taigenteikoku@gmail.com</p>
-                <p class="l-footer__group__text">Tel : 080-6944-6915</p>
-            </div>
+                        <a href="#" class="l-nav__link">
+                            <dt class="l-nav__item--english l-nav__item">TICKET</dt>
+                            <dd class="l-nav__item--japanese l-nav__item">チケット</dd>
+                        </a>
 
-            <p class="l-footer__credit">
-                原作：グリム童話『青髭』より/演出：渡部剛己/音楽：赤木萌絵/音響：片岡稚登/音響操作：？？？？？/照明操作：岡崎彗、原田健太郎/衣裳：雨田はるか/写真撮影：高橋梓/映像撮影編集補佐：金子雄亮/ウェブデザイン｜清水胡桃、高木寛貴/協力：櫻井春菜子/出演：渡部剛己、赤木萌絵/主催：体現帝国/助成：？？？？/後援：内田橋商店街、愛知県、名古屋市、愛知県教育委員会、名古屋市教育委員会
-            </p>
+                    </dl>
+                </div>
 
-            <a href="#" class="l-footer__link"><img src="./images/taigenlogo_yoko.png" alt="体現帝国"
-                    class="l-footer__taigen"></a>
+                <div class="l-footer__group l-footer__group--contact">
+                    <h3 class="l-footer__group__head">CONTACT</h3>
+                    <p class="l-footer__group__text">Mail : taigenteikoku@gmail.com</p>
+                    <p class="l-footer__group__text">Tel : 080-6944-6915</p>
+                </div>
 
-            <small class="l-footer__copy">©体現帝国</small>
+                <p class="l-footer__credit">
+                    原作：グリム童話『青髭』より/演出：渡部剛己/音楽：赤木萌絵/音響：片岡稚登/音響操作：？？？？？/照明操作：岡崎彗、原田健太郎/衣裳：雨田はるか/写真撮影：高橋梓/映像撮影編集補佐：金子雄亮/ウェブデザイン：清水胡桃、高木寛貴/協力：櫻井春菜子/出演：渡部剛己、赤木萌絵/主催：体現帝国/助成：？？？？/後援：内田橋商店街、愛知県、名古屋市、愛知県教育委員会、名古屋市教育委員会
+                </p>
 
-            <div class="l-footer__pagetop">
-                <img src="./images/kagi_icon.png" alt="" class="l-footer__pagetop__img">
-                <p class="l-footer__pagetop__text">PAGE TOP</p>
+                <a href="#" class="l-footer__link"><img src="./images/taigenlogo_yoko.png" alt="体現帝国"
+                        class="l-footer__taigen"></a>
+
+                <small class="l-footer__copy">©体現帝国</small>
+
+                <div class="l-footer__pagetop">
+                    <img src="./images/kagi_icon.png" alt="" class="l-footer__pagetop__img">
+                    <p class="l-footer__pagetop__text">PAGE TOP</p>
+                </div>
+
             </div>
         </footer>
     </div>
     <script src="./jquery-3.7.1.min.js"></script>
     <script src="./luxy.min.js"></script>
-    <script src="./jquery.stickystack.min.js"></script>
     <script src="./script.js"></script>
 </body>
 

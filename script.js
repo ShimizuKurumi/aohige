@@ -207,3 +207,20 @@ ham.on('click', function () { //ハンバーガーメニューをクリックし
     nav.toggleClass('active'); // ナビゲーションメニューにactiveクラスを付け外し
 
 });
+
+
+$(function () {
+    $(".c-button--tukebarai").on("click", function () {
+        $(this).next().slideToggle();
+        $(this).toggleClass("active");//追加部分
+        $(".c-button--means__contents--tukabarai").toggleClass("active");//追加部分
+    });
+});
+
+$(function () {
+    $(".c-button--donetike").on("click", function () {
+        $(this).next().slideToggle();
+        $(this).toggleClass("active");//追加部分
+        $(".c-button--means__contents--donetike").toggleClass("active");//追加部分
+    });
+});

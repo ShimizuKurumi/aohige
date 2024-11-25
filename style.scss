@@ -1,29 +1,79 @@
 @charset "utf-8";
 $main-color: #0B1632;
 $text-color: #F9EFE1;
-$darkBeige: #C4B093;
 $gold: #C88C39;
+$dark-gold: #C4B093;
 
-body {
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+// mixinを定義する（初期値はsp）
+@mixin media($breakpoint) {
+    @media (#{map-get($breakpoints, $breakpoint)} <=width) {
+        @content;
+    }
+}
+
+//基本--------------------------------------
+body,
+html {
     background-color: $main-color;
     font-size: 16px;
-    font-family: "Zen Old Mincho", serif;
+    font-family: "Zen Old Mincho",
+        serif;
     letter-spacing: 0.1em;
     font-weight: 400;
     color: $text-color;
+
+    @include media(sm) {
+        font-size: 17px;
+    }
+
+    @include media(md) {
+        font-size: 18px;
+    }
+
+    @include media(lg) {
+        font-size: 18px;
+    }
+
+    @include media(xl) {
+        font-size: 19px;
+    }
 }
 
 img {
     display: block;
 }
 
+small {
+    display: block;
+}
 
+.bw {
+    display: inline-block;
+}
+
+.br-pc {
+    display: none;
+
+    @include media(md) {
+        display: block;
+    }
+}
+
+
+//カーソル--------------------------------------
 a,
 button {
     cursor: none;
     /* ブラウザのデフォルトカーソルを非表示 */
 }
-
 
 /*ちょっと遅れてついてくるストーカー要素*/
 #stalker {
@@ -49,7 +99,7 @@ button {
     background: url(./images/cursor.png) no-repeat center/cover;
 }
 
-
+//もや--------------------------------------
 .bounce-wrapper {
     width: 100vw;
     height: 100vh;
@@ -72,5 +122,924 @@ button {
         background-color: $text-color;
         transform: translateX(-50%);
 
+    }
+}
+
+//共通-------------------------------------------
+.c-button {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 355px;
+
+    &__img {
+        width: 100%;
+        max-width: 604px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &--map {
+        width: 100%;
+    }
+
+    &__link {
+
+        &--map {
+            border: $text-color 1px solid;
+            width: fit-content;
+            position: relative;
+            padding: 16px 40px;
+            display: block;
+            margin-bottom: 88px;
+
+            &::before {
+                content: "";
+                background-color: $text-color;
+                width: 20px;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                right: -10px;
+            }
+        }
+    }
+
+    &--means {
+        border-bottom: $text-color solid 1px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px;
+        width: 100%;
+        margin-bottom: 16px;
+
+        &__contents {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+}
+
+.c-detail {
+    margin-bottom: 56px;
+
+    &--pc {
+        display: none;
+    }
+
+    &__inner {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__time {
+        margin-bottom: 32px;
+
+        &__text {
+            background-color: $text-color;
+            color: $main-color;
+            width: fit-content;
+            padding: 0 8px 0 8px;
+            font-size: 1.375rem;
+            margin-bottom: 4px;
+            line-height: 1.5;
+        }
+
+        &__bold {
+            font-weight: 600;
+        }
+
+        &__attention {
+            margin-top: 16px;
+        }
+    }
+
+    &__credit {
+        margin-bottom: 32px;
+
+        &__job {
+            position: relative;
+
+            &::after {
+                content: "";
+                background-color: $text-color;
+                width: 38px;
+                height: 1px;
+                display: inline-block;
+                margin: 0 8px 5px 8px;
+            }
+        }
+
+        &__list {
+            display: flex;
+
+            &:first-child {
+                margin-bottom: 8px;
+            }
+        }
+
+        &__name {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__english {
+        font-size: 0.75rem;
+    }
+
+    &__english-text {
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+}
+
+//ヘッダー--------------------------------------
+.l-header {
+    &--pc {
+        display: none;
+    }
+}
+
+//ファーストビュー--------------------------------------
+.p-firstview {
+    padding-top: 24px;
+    margin-bottom: 3.5em;
+
+    &__time,
+    &__english,
+    &__credit,
+    &--pc {
+        display: none;
+    }
+
+    &__taigenlogo {
+        width: 100%;
+        max-width: 78px;
+        margin-left: auto;
+    }
+
+    &__taigen-performance {
+        text-align: right;
+
+        &__text {
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+    }
+
+    &__inner {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__aohigelogo {
+        max-width: 74px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 18%;
+    }
+
+    &__main_visual {
+        width: 100%;
+        max-width: 498px;
+        position: relative;
+        z-index: -1;
+        top: -13vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__circletext {
+        width: 40%;
+        margin-top: -20vh;
+        max-width: 175px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+//バナー-------------------------------------------
+.p-banner {
+    margin-bottom: 5em;
+
+    &__inner {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &--1 {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+}
+
+//イントロダクション--------------------------------
+.p-introduction {
+    margin-bottom: 6.5em;
+
+    &__head-img {
+        width: 100%;
+
+        &--intro {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__head {
+        margin-left: auto;
+        margin-right: auto;
+
+        &--intro {
+            max-width: 700px;
+        }
+
+        &--duction {
+            margin-top: -30px;
+            max-width: 700px;
+        }
+    }
+
+    &__bg-wrapper {
+        width: 100%;
+        height: 34.1875em;
+        object-fit: cover;
+        object-position: 60% 0;
+        overflow: hidden;
+        margin-inline: auto;
+        margin-top: -50px;
+    }
+
+    &__bg {
+        background: url(./images/aohige_intro.jpg) no-repeat center/cover;
+        height: 120%;
+        margin-inline: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    &__text-and-img {
+        position: relative;
+    }
+
+    &__text-group {
+        z-index: 2;
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__title {
+        background-color: $text-color;
+        color: $main-color;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 24px;
+        padding-left: 8px;
+    }
+
+    &__text {
+        line-height: 2.1;
+    }
+}
+
+//ストーリー-----------------------------------
+.p-story {
+    margin-bottom: 6em;
+
+    &__img-and-head {
+        width: 100%;
+        display: flex;
+        margin-bottom: 15vw;
+    }
+
+    &__img {
+        width: 75%;
+        max-width: 542px;
+    }
+
+    &__head {
+        width: 25%;
+    }
+
+    &__head-img {
+        width: 100%;
+        max-width: 170px;
+        transition: 1s;
+        position: relative;
+        left: -50%;
+        z-index: -1;
+
+        &.active {
+            left: -20%;
+        }
+    }
+
+    &__title {
+        font-size: 1.125rem;
+        line-height: 1.4;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+        font-weight: 600;
+    }
+
+    &__text {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 2;
+    }
+}
+
+//スケジュール----------------------------------
+.p-schedule {
+    position: relative;
+
+    &__kagi {
+        position: absolute;
+        right: 0;
+        top: -50px;
+        display: flex;
+        justify-content: flex-end;
+
+        &--1,
+        &--2 {
+            width: 40%;
+            max-width: 200px;
+            object-fit: cover;
+        }
+
+        &--1 {
+            position: relative;
+            left: 20%;
+        }
+
+        &--2 {
+            position: relative;
+            top: -50px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__head {
+        margin-left: -50px;
+        margin-bottom: 80px;
+        width: 50%;
+        max-width: 190px;
+    }
+
+    &__head-img {
+        width: 100%;
+    }
+
+
+    &__bg-wrapper {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 60% 0;
+        overflow: hidden;
+        margin-inline: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &__bg {
+        background: url(./images/aohige_schedule.jpg) no-repeat center/cover;
+        height: 120%;
+        margin-inline: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        margin-bottom: 24px;
+        margin-top: 64px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &::before {
+            content: "";
+            width: 22px;
+            height: 1px;
+            display: inline-block;
+            background-color: $text-color;
+            margin-bottom: 7px;
+            margin-right: 8px;
+        }
+    }
+
+    &__text {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+
+    &__bold {
+        font-weight: 600;
+    }
+
+    &__attention {
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+
+    &__text-group {
+        margin-right: 5%;
+        margin-left: 2%;
+    }
+
+}
+
+//アクセス--------------------------------------
+
+.p-access {
+    margin-bottom: 6.75em;
+
+    &__inner {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__head {
+        max-width: 658px;
+        position: relative;
+        top: -20vw;
+        z-index: -2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__head-img {
+        width: 100%;
+    }
+
+    &__taigenteikoukan {
+        width: 100%;
+        max-width: 219px;
+        margin-bottom: 16px;
+    }
+
+    &__address {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        margin-bottom: 24px;
+        margin-top: 40px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &::before {
+            content: "";
+            width: 22px;
+            height: 1px;
+            display: inline-block;
+            background-color: $text-color;
+            margin-bottom: 7px;
+            margin-right: 8px;
+        }
+    }
+
+    &__description {
+        line-height: 2.2;
+    }
+
+    &__map-img {
+        width: 100%;
+    }
+
+    &__contents {
+        margin-bottom: 80px;
+    }
+}
+
+
+
+//チケット----------------------------------------------------
+.p-ticket {
+    background: url(./images/ticketbg.jpg) no-repeat center/cover;
+    padding-bottom: 5em;
+
+    &__head {
+        width: 90%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: -8vw;
+
+        @include media(md) {
+            top: -60px;
+        }
+
+    }
+
+    &__head-img {
+        width: 100%;
+    }
+
+    &__category {
+        text-align: center;
+    }
+
+    &__inner {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__category {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+        margin-top: 40px;
+    }
+
+    &__price {
+        text-align: center;
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+    }
+
+    &__price-number {
+        font-size: 2.25rem;
+    }
+
+    &__attention {
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    &__means {
+        margin-top: 40px;
+        margin-bottom: 56px;
+    }
+
+    &__purchase {
+        background-color: $text-color;
+        color: $main-color;
+        padding: 0 1.5em 3em 1.5em;
+        margin-bottom: 56px;
+    }
+
+    &__link {
+        text-decoration: underline 1px $text-color;
+        margin-left: 8px;
+    }
+
+    &__relation {
+        padding: 0 1.5em 3em 1.5em;
+        border: $text-color 1px solid;
+
+        &__table-head,
+        &__table-cell {
+            border-collapse: collapse;
+            border: $text-color 1px solid;
+            text-align: center;
+        }
+
+        &__table-head {
+            background-color: $text-color;
+            color: $main-color;
+            font-weight: 600;
+            padding: 4px;
+        }
+
+        &__table-cell {
+            margin-bottom: 24px;
+            padding: 8px;
+        }
+
+        &__attention {
+            margin-bottom: 40px;
+        }
+    }
+
+    table,
+    tbody,
+    td,
+    th,
+    tr {
+        display: block;
+    }
+
+    &__bigtitle {
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 16px;
+
+        &::before {
+            content: "";
+            background-color: $main-color;
+            display: block;
+            width: 1px;
+            height: 56px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 16px;
+        }
+
+        &--2 {
+            &::before {
+                content: "";
+                background-color: $text-color;
+                display: block;
+                width: 1px;
+                height: 56px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        margin-bottom: 32px;
+        line-height: 1.6;
+    }
+
+    &__attention {
+        margin-top: 16px;
+    }
+
+
+}
+
+//コメント----------------------------------------------
+.p-comment {
+    padding: 3.5em 0;
+
+    &__head {
+        width: 100%;
+        max-width: 690px;
+        margin-right: auto;
+        position: relative;
+        left: -16px;
+    }
+
+    &__head-img {
+        width: 100%;
+    }
+
+    &__card {
+        border: 1px solid $text-color;
+        padding: 40px 24px 24px 24px;
+        margin-bottom: 2.5em;
+        background-color: $main-color;
+    }
+
+    &__card-list {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: -56px;
+    }
+
+    &__info {
+        &--name {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        &--job {
+            color: $gold;
+        }
+
+        padding-bottom: 24px;
+        border-bottom: $text-color solid 1px;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+        line-height: 1.3;
+    }
+
+    &__text {
+        line-height: 1.8;
+        font-weight: 400;
+        opacity: 0.8;
+        text-align: justify;
+    }
+
+}
+
+//ムービー-----------------------------------------
+.p-movie {
+    padding: 5em 0;
+    background: url(./images/mable.png) no-repeat center/cover;
+
+    &__head {
+        width: 90%;
+        max-width: 480px;
+        margin-left: auto;
+        position: relative;
+        top: -8.5em;
+    }
+
+    &__head-img {
+        width: 100%;
+    }
+
+    iframe {
+        width: 90%;
+        aspect-ratio: 16/9;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+        margin-top: -80px;
+    }
+
+    &__title {
+        text-align: center;
+    }
+}
+
+//注意------------------------------------------
+.p-attention {
+    background-color: $dark-gold;
+    color: $main-color;
+    padding: 4.5em 0;
+
+    &__head {
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        line-height: 1.7;
+    }
+
+    &__inner {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+//フッター------------------------------
+.l-footer {
+    position: relative;
+    padding: 4.5em 0;
+    background: url(./images/footer.jpg) no-repeat center/cover;
+
+    &__inner {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__logo {
+        width: 20%;
+        max-width: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4.5em;
+    }
+
+    &__logo-img {
+        width: 100%;
+    }
+
+    &__taigen {
+        width: 100%;
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        max-width: 210px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__group {
+        &__head {
+            font-weight: 600;
+            color: $dark-gold;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        &--menu {
+            padding-bottom: 56px;
+            border-bottom: rgba($color: $text-color, $alpha: 0.5) solid 1px;
+            margin-bottom: 56px;
+        }
+
+        &--contact {
+            margin-bottom: 76px;
+        }
+
+        &__text {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__credit {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        margin-bottom: 76px;
+    }
+
+    &__copy {
+        text-align: center;
+        margin-top: 76px;
+    }
+
+    &__pagetop {
+        position: absolute;
+        bottom: 3%;
+        right: 3%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        &__text {
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            color: $dark-gold;
+            padding-left: 8px;
+        }
+
+        &__img {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+
+//フッターナビ-------------------------------------
+.l-nav {
+    &--footer {
+        display: flex;
+        gap: 2.5em;
+        flex-wrap: wrap;
+    }
+
+
+    &__item {
+        &--english {
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+
+        &--japanese {
+            font-size: 1rem;
+        }
     }
 }
