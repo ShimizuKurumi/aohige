@@ -118,20 +118,7 @@ $(function () {
         }, 0);//カーソルより遅れる時間を指定
     });
     //aタグホバー
-    $("a").on({
-        "mouseenter": function () {
-            //activeクラス付与
-            cursor.addClass("active");
-            stalker.addClass("active");
-        },
-        "mouseleave": function () {
-            cursor.removeClass("active");
-            stalker.removeClass("active");
-
-        }
-    });
-
-    $("button").on({
+    $(".c-button--ticket").on({
         "mouseenter": function () {
             //activeクラス付与
             cursor.addClass("active");
@@ -166,7 +153,7 @@ $(function () {
 const headings = document.querySelectorAll('.target');
 
 const options = {
-    threshold: 1
+    threshold: 1,
 };
 
 // 実行するよ
@@ -200,13 +187,15 @@ if (isMobile()) {
     console.log('PCです');
 }
 
-const ham = $('#js-hamburger');
-const nav = $('#js-nav');
+const ham = $('.l-hamburger');
+const nav = $('.l-nav__wrapper--mobile');
+
 ham.on('click', function () { //ハンバーガーメニューをクリックしたら
     ham.toggleClass('active'); // ハンバーガーメニューにactiveクラスを付け外し
     nav.toggleClass('active'); // ナビゲーションメニューにactiveクラスを付け外し
 
 });
+
 
 
 $(function () {

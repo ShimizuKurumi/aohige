@@ -17,12 +17,62 @@
     <div id="cursor"></div>
     <img src="./images/cursor.png" alt="" id="stalker">
 
-    <div id="luxy">
+    <!-- ヘッダーモバイル -->
+    <header class="l-header l-header--mobile">
+        <button class="l-hamburger">
+            <span class="l-hamburger__border"></span>
+            <span class="l-hamburger__border"></span>
+            <span class="l-hamburger__border"></span>
+            <p class="l-hamburger__text">MENU</p>
+        </button>
 
-        <div class="bounce-wrapper">
-            <div id="object"></div>
+        <div class="l-nav__wrapper--mobile">
+            <dl class="l-nav l-nav--mobile">
+                <a href="#" class="l-nav__link">
+                    <dt class="l-nav__item--english l-nav__item">INTRODUCTION</dt>
+                    <dd class="l-nav__item--japanese l-nav__item">イントロダクション</dd>
+                </a>
+
+                <a href="#" class="l-nav__link">
+                    <dt class="l-nav__item--english l-nav__item">STORY</dt>
+                    <dd class="l-nav__item--japanese l-nav__item">ストーリー</dd>
+                </a>
+
+                <a href="#" class="l-nav__link">
+                    <dt class="l-nav__item--english l-nav__item">SCHEDULE</dt>
+                    <dd class="l-nav__item--japanese l-nav__item">スケジュール</dd>
+                </a>
+
+                <a href="#" class="l-nav__link">
+                    <dt class="l-nav__item--english l-nav__item">ACCESS</dt>
+                    <dd class="l-nav__item--japanese l-nav__item">アクセス</dd>
+                </a>
+
+                <a href="#" class="l-nav__link">
+                    <dt class="l-nav__item--english l-nav__item">COMMENT</dt>
+                    <dd class="l-nav__item--japanese l-nav__item">コメント</dd>
+                </a>
+
+                <a href="#" class="l-nav__link">
+                    <dt class="l-nav__item--english l-nav__item">MOVIE</dt>
+                    <dd class="l-nav__item--japanese l-nav__item">動画</dd>
+                </a>
+
+                <a href="#" class="l-nav__link">
+                    <dt class="l-nav__item--english l-nav__item">TICKET</dt>
+                    <dd class="l-nav__item--japanese l-nav__item">チケット</dd>
+                </a>
+
+            </dl>
         </div>
+    </header>
 
+    <div class="bounce-wrapper">
+        <div id="object"></div>
+    </div>
+
+
+    <div id="luxy">
         <!-- ファーストビュー -->
 
         <section class="p-firstview p-firstview--pc">
@@ -48,9 +98,20 @@
                 <div class="p-firstview__english">
                     <p class="p-firstview__english-text">On this day, the "warehouse" becomes a "theater,"</p>
                     <p class="p-firstview__english-text">the "theater" becomes "Bluebeard's castle," and</p>
-                    <p class="p-firstview__english-text">"Bluebeard's castle" becomes the "Japan" we know</p>
-                    <p class="p-firstview__english-text">so well.</p>
+                    <p class="p-firstview__english-text">"Bluebeard's castle" becomes the "Japan" we know so well.</p>
 
+                </div>
+
+                <div class="p-firstview__credit">
+                    <dl class="p-firstview__credit__list">
+                        <dt class="p-firstview__credit__job">演出</dt>
+                        <dd class="p-firstview__credit__name">渡部剛己</dd>
+                    </dl>
+
+                    <dl class="p-firstview__credit__list">
+                        <dt class="p-firstview__credit__job">音楽</dt>
+                        <dd class="p-firstview__credit__name">赤木萌絵</dd>
+                    </dl>
                 </div>
 
 
@@ -72,51 +133,6 @@
 
 
         <!-- ヘッダー -->
-        <header class="l-header l-header--mobile">
-            <button class="l-hamburger">
-                <span class="l-hamburger-border"></span>
-                <span class="l-hamburger-border"></span>
-                <span class="l-hamburger-border"></span>
-            </button>
-
-            <dl class="l-nav l-nav--mobile">
-                <a href="#" class="l-nav__link">
-                    <dt class="l-nav__item--english l-nav__item"></dt>
-                    <dd class="l-nav__item--japanese l-nav__item"></dd>
-                </a>
-
-                <a href="#" class="l-nav__link">
-                    <dt class="l-nav__item--english l-nav__item"></dt>
-                    <dd class="l-nav__item--japanese l-nav__item"></dd>
-                </a>
-
-                <a href="#" class="l-nav__link">
-                    <dt class="l-nav__item--english l-nav__item"></dt>
-                    <dd class="l-nav__item--japanese l-nav__item"></dd>
-                </a>
-
-                <a href="#" class="l-nav__link">
-                    <dt class="l-nav__item--english l-nav__item"></dt>
-                    <dd class="l-nav__item--japanese l-nav__item"></dd>
-                </a>
-
-                <a href="#" class="l-nav__link">
-                    <dt class="l-nav__item--english l-nav__item"></dt>
-                    <dd class="l-nav__item--japanese l-nav__item"></dd>
-                </a>
-
-                <a href="#" class="l-nav__link">
-                    <dt class="l-nav__item--english l-nav__item"></dt>
-                    <dd class="l-nav__item--japanese l-nav__item"></dd>
-                </a>
-
-                <a href="#" class="l-nav__link">
-                    <dt class="l-nav__item--english l-nav__item"></dt>
-                    <dd class="l-nav__item--japanese l-nav__item"></dd>
-                </a>
-
-            </dl>
-        </header>
 
         <header class="l-header l-header--pc">
             <dl class="l-nav l-nav--pc">
@@ -200,8 +216,10 @@
                             class="c-button__link"><img src="./images/btn.png" alt=""
                                 class="c-button__img"></a></button>
 
-                    <img src="./images/banner.png" alt="バナー" class="p-banner--1">
-                    <img src="./images/banner.png" alt="バナー" class="p-banner--2">
+                    <a href="#" class="p-banner__link"><img src="./images/banner.png" alt="バナー" class="p-banner--1"></a>
+
+                    <!-- ここから下は非表示 -->
+                    <a href="#" class="p-banner__link"><img src="./images/banner.png" alt="バナー" class="p-banner--2"></a>
                 </div>
             </section>
         </div>
@@ -209,12 +227,12 @@
 
         <!-- イントロダクション -->
         <section class="p-introduction">
-            <h2 class="p-introduction__head p-introduction__head--intro">
+            <h2 class="p-introduction__head p-introduction__head--intro target">
                 <img src="./images/2x/intro@2x.png" alt="イントロダクション"
                     class="p-introduction__head-img p-introduction__head-img--intro">
             </h2>
 
-            <h2 class="p-introduction__head p-introduction__head--introduction">
+            <h2 class="p-introduction__head p-introduction__head--introduction target">
                 <img src="./images/2x/intro_1@2x.png" alt="イントロダクション"
                     class="p-introduction__head-img p-introduction__head-img--introduction">
             </h2>
@@ -238,7 +256,7 @@
                 </div>
             </div>
 
-            <h2 class="p-introduction__head p-introduction__head--duction"><img src="./images/2x/duction@2x.png"
+            <h2 class="p-introduction__head p-introduction__head--duction target"><img src="./images/2x/duction@2x.png"
                     alt="イントロダクション" class="p-introduction__head-img p-introduction__head-img--duction">
             </h2>
         </section>
@@ -281,7 +299,7 @@
 
 
             <div class="p-schedule__content">
-                <h2 class="p-schedule__head"><img src="./images/2x/schedule_1@2x.png" alt="スケジュール"
+                <h2 class="p-schedule__head target"><img src="./images/2x/schedule_1@2x.png" alt="スケジュール"
                         class="p-schedule__head-img">
                 </h2>
                 <div class="p-schedule__text-group">
@@ -306,7 +324,8 @@
         <!-- アクセス -->
         <section class="p-access">
             <div class="p-access__inner">
-                <h2 class="p-access__head"><img src="./images/2x/access@2x.png" alt="アクセス" class="p-access__head-img">
+                <h2 class="p-access__head target"><img src="./images/2x/access@2x.png" alt="アクセス"
+                        class="p-access__head-img">
                 </h2>
 
 
@@ -367,7 +386,7 @@
                     </div>
                 </div>
 
-                <div class="p-ticket__purchase">
+                <div class="p-ticket__purchase target">
                     <h2 class="p-ticket__bigtitle">チケット購入</h2>
                     <h3 class="p-ticket__title">PassMarketにて<br>
                         前売券を御購入<span class="bw">いただけます。</span></h3>
@@ -379,7 +398,7 @@
                         class="p-ticket__purchase__attention p-ticket__attention">※PassMarketが開きます。</small>
                 </div>
 
-                <div class="p-ticket__relation">
+                <div class="p-ticket__relation target">
                     <h2 class="p-ticket__bigtitle p-ticket__bigtitle--2">関連企画</h2>
 
                     <h3 class="p-ticket__title">試演会<br>
@@ -423,10 +442,11 @@
 
         <!-- コメント -->
         <section class="p-comment">
-            <h2 class="p-comment__head"><img src="./images/2x/comment@2x.png" alt="コメント" class="p-comment__head-img">
+            <h2 class="p-comment__head target"><img src="./images/2x/comment@2x.png" alt="コメント"
+                    class="p-comment__head-img">
             </h2>
 
-            <div class="p-comment__card-list">
+            <div class="p-comment__card-list target">
                 <div class="p-comment__card">
                     <dl class="p-comment__info">
                         <dt class="p-comment__info--name">仮の名前</dt>
@@ -536,8 +556,11 @@
 
                 <div class="l-footer__group l-footer__group--contact">
                     <h3 class="l-footer__group__head">CONTACT</h3>
-                    <p class="l-footer__group__text">Mail : taigenteikoku@gmail.com</p>
-                    <p class="l-footer__group__text">Tel : 080-6944-6915</p>
+
+                    <div class="l-footer__group__text-group">
+                        <p class="l-footer__group__text">Mail : taigenteikoku@gmail.com</p>
+                        <p class="l-footer__group__text">Tel : 080-6944-6915</p>
+                    </div>
                 </div>
 
                 <p class="l-footer__credit">
@@ -550,8 +573,10 @@
                 <small class="l-footer__copy">©体現帝国</small>
 
                 <div class="l-footer__pagetop">
-                    <img src="./images/kagi_icon.png" alt="" class="l-footer__pagetop__img">
-                    <p class="l-footer__pagetop__text">PAGE TOP</p>
+                    <a href="#">
+                        <img src="./images/kagi_icon.png" alt="" class="l-footer__pagetop__img">
+                        <p class="l-footer__pagetop__text">PAGE TOP</p>
+                    </a>
                 </div>
 
             </div>
