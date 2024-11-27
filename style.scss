@@ -67,6 +67,21 @@ small {
     }
 }
 
+.br-mb {
+    display: block;
+
+    @include media(md) {
+        display: none;
+    }
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 604px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 //カーソル--------------------------------------
 a,
@@ -144,6 +159,10 @@ button {
         width: 100%;
     }
 
+    &--ticket-main {
+        max-width: 604px;
+    }
+
     &__link {
 
         &--map {
@@ -175,6 +194,12 @@ button {
         width: 100%;
         margin-bottom: 16px;
 
+        &__wrapper {
+            @include media(sm) {
+                width: 48%;
+            }
+        }
+
         &__contents {
             display: none;
 
@@ -188,27 +213,43 @@ button {
 
 .c-detail {
     margin-bottom: 56px;
+    margin-left: auto;
+    margin-right: auto;
 
-    &--pc {
+    @include media(lg) {
         display: none;
     }
 
+    &--pc {
+        display: none;
+
+        @include media(md) {
+            display: block;
+        }
+
+    }
+
     &__inner {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
     }
 
     &__time {
         margin-bottom: 32px;
+
+        &--pc {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translateX(-450px);
+        }
 
         &__text {
             background-color: $text-color;
             color: $main-color;
             width: fit-content;
             padding: 0 8px 0 8px;
-            font-size: 1.375rem;
-            margin-bottom: 4px;
+            font-size: 1.125rem;
+            margin-bottom: 8px;
             line-height: 1.5;
         }
 
@@ -218,11 +259,20 @@ button {
 
         &__attention {
             margin-top: 16px;
+            background-color: $main-color;
+            width: fit-content;
+            padding: 2px;
         }
     }
 
     &__credit {
         margin-bottom: 32px;
+
+        @include media(sm) {
+            display: flex;
+            align-items: center;
+            gap: 0 2em;
+        }
 
         &__job {
             position: relative;
@@ -233,7 +283,9 @@ button {
                 width: 38px;
                 height: 1px;
                 display: inline-block;
-                margin: 0 8px 5px 8px;
+                margin: 0 8px 0 8px;
+                position: relative;
+                top: -25%;
             }
         }
 
@@ -242,6 +294,10 @@ button {
 
             &:first-child {
                 margin-bottom: 8px;
+
+                @include media(sm) {
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -265,6 +321,14 @@ button {
 .l-header {
     &--pc {
         display: none;
+
+        @include media(md) {
+            display: block;
+            width: 90%;
+            max-width: 1232px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 
@@ -272,26 +336,80 @@ button {
 .p-firstview {
     padding-top: 24px;
     margin-bottom: 3.5em;
+    position: relative;
 
-    &__time,
-    &__english,
-    &__credit,
+    &--mobile {
+        display: block;
+
+        @include media(lg) {
+            display: none;
+        }
+    }
+
     &--pc {
         display: none;
+
+        @include media(lg) {
+            display: block;
+        }
     }
+
+    &__english {
+        position: absolute;
+        top: 60%;
+        right: 50%;
+        transform: translateX(450px);
+    }
+
+    &__english-text {
+        background-color: $main-color;
+        width: fit-content;
+        margin-bottom: 6px;
+        font-size: 0.750rem;
+    }
+
+    &__time {
+        &--pc {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translateX(-450px);
+        }
+    }
+
 
     &__taigenlogo {
         width: 100%;
         max-width: 78px;
         margin-left: auto;
+
+        &--pc {
+            position: relative;
+            left: 8px;
+            margin-bottom: 15px;
+        }
     }
 
     &__taigen-performance {
         text-align: right;
 
+        &--pc {
+            position: absolute;
+            top: 3%;
+            right: 3%;
+        }
+
         &__text {
             margin-bottom: 14px;
             line-height: 1.6;
+
+            &--pc {
+                -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+                text-align: left;
+                margin-left: auto;
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -325,17 +443,19 @@ button {
         margin-left: auto;
         margin-right: auto;
     }
+
 }
 
 
 //バナー-------------------------------------------
 .p-banner {
     margin-bottom: 5em;
+    max-width: 604px;
+    margin-left: auto;
+    margin-right: auto;
 
     &__inner {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
         text-align: center;
     }
 
@@ -361,6 +481,10 @@ button {
             margin-left: auto;
             margin-right: auto;
         }
+
+        &--introduction {
+            width: 100%;
+        }
     }
 
     &__head {
@@ -369,11 +493,31 @@ button {
 
         &--intro {
             max-width: 700px;
+
+            @include media(lg) {
+                display: none;
+            }
         }
 
         &--duction {
             margin-top: -30px;
             max-width: 700px;
+
+            @include media(lg) {
+                display: none;
+            }
+        }
+
+        &--introduction {
+            display: none;
+            margin-bottom: -90px;
+            max-width: 1166px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include media(lg) {
+                display: block;
+            }
         }
     }
 
@@ -430,55 +574,118 @@ button {
 .p-story {
     margin-bottom: 6em;
 
+
+    &__inner {
+        @include media(xl) {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10em;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__text-group {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include media(md) {
+            width: 80%;
+            text-align: center;
+        }
+
+        @include media(xl) {
+            width: 50%;
+        }
+    }
+
     &__img-and-head {
         width: 100%;
         display: flex;
-        margin-bottom: 15vw;
+        margin-bottom: 4em;
+
+        @include media(sm) {
+            margin-bottom: 5em;
+        }
+
+        @include media(xl) {
+            margin-bottom: 0;
+            width: 50%;
+        }
+    }
+
+    &__img-wrapper {
+        width: 100%;
+        max-width: 542px;
+        overflow: hidden;
+        aspect-ratio: 8/11;
     }
 
     &__img {
-        width: 75%;
-        max-width: 542px;
+        background: url(./images/aohige_story1.jpg) no-repeat center/cover;
+        height: 120%;
+        margin-inline: auto;
+        position: relative;
+        width: 100%;
     }
 
     &__head {
         width: 25%;
+        max-width: 170px;
+        transition: 1s;
+        position: relative;
+        left: -15%;
+        z-index: -1;
+
+        &.active {
+            left: -5%;
+        }
     }
 
     &__head-img {
         width: 100%;
-        max-width: 170px;
-        transition: 1s;
-        position: relative;
-        left: -50%;
-        z-index: -1;
-
-        &.active {
-            left: -20%;
-        }
     }
 
     &__title {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         line-height: 1.4;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
         margin-bottom: 16px;
         font-weight: 600;
+
+        @include media(xl) {
+            margin: 0;
+            margin-bottom: 16px;
+        }
     }
 
     &__text {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
         line-height: 2;
+        text-align: justify;
+
+        @include media(md) {
+            text-align: center;
+            line-height: 2.5;
+        }
+
+        @include media(xl) {
+            margin: 0;
+        }
     }
 }
 
 //スケジュール----------------------------------
 .p-schedule {
     position: relative;
+    padding: 8em 0 6em;
+
+    @include media(lg) {
+        padding-top: 8em;
+        padding-bottom: 8em;
+    }
 
     &__kagi {
         position: absolute;
@@ -505,20 +712,19 @@ button {
         }
     }
 
-    &__content {
-        display: flex;
-        align-items: center;
-    }
 
     &__head {
-        margin-left: -50px;
-        margin-bottom: 80px;
-        width: 50%;
-        max-width: 190px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 640px;
+
     }
 
     &__head-img {
-        width: 100%;
+        width: 90%;
+        margin-left: auto;
     }
 
 
@@ -567,6 +773,10 @@ button {
         font-size: 1.125rem;
         line-height: 1.5;
         margin-bottom: 16px;
+
+        @include media(sm) {
+            font-size: 1.2rem;
+        }
     }
 
     &__bold {
@@ -579,8 +789,25 @@ button {
     }
 
     &__text-group {
-        margin-right: 5%;
-        margin-left: 2%;
+        width: 75%;
+        margin-left: 5%;
+        margin-right: auto;
+
+        @include media(sm) {
+            margin-left: 8%;
+        }
+
+        @include media(md) {
+            margin-left: 10%;
+        }
+
+        @include media(lg) {
+            margin-left: 15%;
+        }
+
+        @include media(xxl) {
+            margin-left: 20%;
+        }
     }
 
 }
@@ -594,12 +821,16 @@ button {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+
+        @include media(md) {
+            width: 80%;
+        }
     }
 
     &__head {
         max-width: 658px;
         position: relative;
-        top: -20vw;
+        top: -6em;
         z-index: -2;
         margin-left: auto;
         margin-right: auto;
@@ -649,6 +880,7 @@ button {
 
     &__contents {
         margin-bottom: 80px;
+        margin-top: -80px;
     }
 }
 
@@ -657,7 +889,7 @@ button {
 //チケット----------------------------------------------------
 .p-ticket {
     background: url(./images/ticketbg.jpg) no-repeat center/cover;
-    padding-bottom: 5em;
+    padding-bottom: 7em;
 
     &__head {
         width: 90%;
@@ -685,6 +917,10 @@ button {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+
+        @include media(lg) {
+            width: 70%;
+        }
     }
 
     &__category {
@@ -711,6 +947,11 @@ button {
     &__means {
         margin-top: 40px;
         margin-bottom: 56px;
+
+        @include media(sm) {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__purchase {
@@ -718,6 +959,10 @@ button {
         color: $main-color;
         padding: 0 1.5em 3em 1.5em;
         margin-bottom: 56px;
+
+        @include media(sm) {
+            padding: 0 2.5em 4em 2.5em;
+        }
     }
 
     &__link {
@@ -725,15 +970,36 @@ button {
         margin-left: 8px;
     }
 
+    &__small {
+        font-size: 0.875rem;
+        display: inline-block;
+    }
+
     &__relation {
         padding: 0 1.5em 3em 1.5em;
         border: $text-color 1px solid;
+
+        @include media(sm) {
+            padding: 0 2.5em 4em 2.5em;
+        }
+
+        &__table {
+            display: flex !important;
+        }
 
         &__table-head,
         &__table-cell {
             border-collapse: collapse;
             border: $text-color 1px solid;
             text-align: center;
+
+            @include media(sm) {
+                border-right: 0;
+
+                &:last-child {
+                    border-right: $text-color 1px solid;
+                }
+            }
         }
 
         &__table-head {
@@ -741,6 +1007,17 @@ button {
             color: $main-color;
             font-weight: 600;
             padding: 4px;
+
+            @include media(sm) {
+                border-right: $main-color 1px solid;
+
+            }
+
+            &.last {
+                @include media(sm) {
+                    border-right: $text-color solid 1px
+                }
+            }
         }
 
         &__table-cell {
@@ -753,6 +1030,17 @@ button {
         }
     }
 
+
+    table tbody {
+        width: 100%;
+
+        @include media(sm) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+
     table,
     tbody,
     td,
@@ -764,7 +1052,7 @@ button {
     &__bigtitle {
         text-align: center;
         font-weight: 600;
-        margin-bottom: 16px;
+        margin-bottom: 2em;
 
         &::before {
             content: "";
@@ -796,15 +1084,19 @@ button {
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
-        font-size: 1.25rem;
+        font-size: 1.375rem;
         font-weight: 600;
         line-height: 1.3;
         margin-bottom: 16px;
     }
 
     &__text {
-        margin-bottom: 32px;
+        margin-bottom: 40px;
         line-height: 1.6;
+
+        @include media(md) {
+            text-align: center;
+        }
     }
 
     &__attention {
@@ -842,7 +1134,7 @@ button {
         margin-left: auto;
         margin-right: auto;
         position: relative;
-        top: -56px;
+        top: -32px;
     }
 
     &__info {
@@ -877,15 +1169,21 @@ button {
 
 //ムービー-----------------------------------------
 .p-movie {
-    padding: 5em 0;
+    padding: 160px 0 80px;
     background: url(./images/mable.png) no-repeat center/cover;
+    position: relative;
 
     &__head {
         width: 90%;
         max-width: 480px;
         margin-left: auto;
-        position: relative;
-        top: -8.5em;
+        position: absolute;
+        right: 0;
+        top: -15%;
+
+        @include media(sm) {
+            top: -80px;
+        }
     }
 
     &__head-img {
@@ -898,12 +1196,17 @@ button {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 16px;
+        margin-bottom: 1.5em;
         margin-top: -80px;
+
+        @include media(sm) {
+            width: 80%;
+        }
     }
 
     &__title {
         text-align: center;
+        font-size: 1rem;
     }
 }
 
@@ -922,6 +1225,9 @@ button {
 
     &__text {
         line-height: 1.7;
+        max-width: 626px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__inner {
@@ -941,6 +1247,10 @@ button {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+
+        @include media(sm) {
+            width: 80%;
+        }
     }
 
     &__logo {
@@ -1018,12 +1328,13 @@ button {
 
         &__img {
             margin-bottom: 24px;
+            max-width: 27px;
         }
     }
 }
 
 
-//フッターナビ-------------------------------------
+//ナビ-------------------------------------
 .l-nav {
     &--footer {
         display: flex;
@@ -1031,11 +1342,28 @@ button {
         flex-wrap: wrap;
     }
 
+    &--pc {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        padding: 24px 0;
+        border-top: $text-color 1px solid;
+        border-bottom: $text-color 1px solid;
+        gap: 1.5em 2em;
+        margin-bottom: 5em;
+
+        .l-nav__item--english {
+            color: $dark-gold;
+        }
+    }
+
 
     &__item {
         &--english {
             font-weight: 600;
             font-size: 1.125rem;
+            margin-bottom: 4px;
         }
 
         &--japanese {
