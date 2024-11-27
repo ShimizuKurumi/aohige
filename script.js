@@ -213,3 +213,13 @@ $(function () {
         $(".c-button--means__contents--donetike").toggleClass("active");//追加部分
     });
 });
+
+$(function () {
+    $('a[href^="#"]').click(function () {//href属性に#を含むaタグをクリックした時
+        var href = $(this).attr("href");//クリックした要素のhref属性を取得
+        var target = $(href == "#" || href == "" ? 'html' : href);//リンク先を取得
+        var position = target.offset().top - 50;//リンク先までの距離を取得
+        $("html, body").animate({ scrollTop: position }, 300);//スムーススクロール
+        return false;
+    });
+});

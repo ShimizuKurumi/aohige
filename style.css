@@ -70,6 +70,10 @@ small {
   margin-right: auto;
 }
 
+a {
+  pointer-events: auto;
+}
+
 .c-button--ticket {
   cursor: none;
   /* ブラウザのデフォルトカーソルを非表示 */
@@ -149,6 +153,11 @@ small {
   padding: 16px 40px;
   display: block;
   margin-bottom: 88px;
+  transition: 0.3s ease;
+}
+.c-button__link--map:hover {
+  background-color: #F9EFE1;
+  color: #0B1632;
 }
 .c-button__link--map::before {
   content: "";
@@ -672,7 +681,9 @@ small {
   width: 70%;
   max-width: 542px;
   overflow: hidden;
-  aspect-ratio: 8/12;
+  aspect-ratio: 8/11;
+  /* 画像の高さに合わせて調整 */
+  position: relative;
 }
 @media (992px <= width) {
   .p-story__img-wrapper {
@@ -680,11 +691,12 @@ small {
   }
 }
 .p-story__img {
-  background: url(./images/aohige_story1.jpg) no-repeat center/cover;
   height: 120%;
   margin-inline: auto;
-  position: relative;
   width: 100%;
+  background: url(./images/aohige_story1.jpg) no-repeat center/cover;
+  /* 初期状態では非表示 */
+  /* フェードイン/アウトのアニメーション */
 }
 .p-story__head {
   width: 25%;
@@ -1359,6 +1371,9 @@ small {
   font-size: 0.875rem;
   line-height: 1.6;
   margin-bottom: 76px;
+  max-width: 926px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .l-footer__copy {
   text-align: center;
@@ -1490,6 +1505,40 @@ small {
   100% {
     opacity: 1;
     z-index: 999;
+  }
+}
+@-webkit-keyframes bgAnime {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  63% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bgAnime {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  63% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

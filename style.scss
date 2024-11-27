@@ -82,6 +82,10 @@ small {
     margin-right: auto;
 }
 
+a {
+    pointer-events: auto;
+}
+
 
 //カーソル--------------------------------------
 .c-button--ticket {
@@ -156,6 +160,7 @@ small {
 
     &--map {
         width: 100%;
+
     }
 
     &--ticket-main {
@@ -171,6 +176,12 @@ small {
             padding: 16px 40px;
             display: block;
             margin-bottom: 88px;
+            transition: .3s ease;
+
+            &:hover {
+                background-color: $text-color;
+                color: $main-color;
+            }
 
             &::before {
                 content: "";
@@ -180,6 +191,7 @@ small {
                 position: absolute;
                 top: 50%;
                 right: -10px;
+
             }
         }
     }
@@ -760,7 +772,9 @@ small {
         width: 70%;
         max-width: 542px;
         overflow: hidden;
-        aspect-ratio: 8/12;
+        aspect-ratio: 8/11;
+        /* 画像の高さに合わせて調整 */
+        position: relative;
 
         @include media(lg) {
             width: 100%;
@@ -768,11 +782,31 @@ small {
     }
 
     &__img {
-        background: url(./images/aohige_story1.jpg) no-repeat center/cover;
         height: 120%;
         margin-inline: auto;
-        position: relative;
         width: 100%;
+        background: url(./images/aohige_story1.jpg) no-repeat center/cover;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+
+        // animation: bgAnime 15s infinite;
+        /* 初期状態では非表示 */
+        /* フェードイン/アウトのアニメーション */
+
+        // &--1 {
+        //     background: url(./images/aohige_story1.jpg) no-repeat center/cover;
+        // }
+
+        // &--2 {
+        //     background: url(./images/aohige_story2.jpg) no-repeat 70% 50%/cover;
+        //     animation-delay: 5s;
+        // }
+
+        // &--3 {
+        //     background: url(./images/aohige_story3.jpg) no-repeat center/cover;
+        //     animation-delay: 10s;
+        // }
     }
 
     &__head {
@@ -1536,6 +1570,9 @@ small {
         font-size: 0.875rem;
         line-height: 1.6;
         margin-bottom: 76px;
+        max-width: 926px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__copy {
@@ -1675,5 +1712,27 @@ small {
     100% {
         opacity: 1;
         z-index: 999;
+    }
+}
+
+@keyframes bgAnime {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    63% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
