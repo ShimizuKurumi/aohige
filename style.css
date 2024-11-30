@@ -506,15 +506,37 @@ a {
   margin-left: auto;
   margin-right: auto;
   width: 18%;
+  position: relative;
+  z-index: 3;
+}
+.p-firstview__aohigelogo:hover + .p-firstview__main_visual__wrapper .p-firstview__main_visual--2 {
+  opacity: 1;
 }
 .p-firstview__main_visual {
   width: 100%;
   max-width: 498px;
   position: relative;
+  left: 0;
+  right: 0;
   z-index: -1;
-  top: -13vh;
   margin-left: auto;
   margin-right: auto;
+}
+.p-firstview__main_visual__wrapper {
+  position: relative;
+  top: -13vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-firstview__main_visual--2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 1s ease;
 }
 .p-firstview__circletext {
   width: 40%;
@@ -1696,6 +1718,28 @@ a {
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes opacityAnime2 {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opacityAnime2 {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
