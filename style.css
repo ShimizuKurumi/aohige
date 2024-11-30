@@ -973,11 +973,11 @@ a {
   margin-bottom: 2em;
 }
 .p-access__head.active {
-  top: -4em;
+  top: -5em;
 }
-@media (768px <= width) {
+@media (992px <= width) {
   .p-access__head.active {
-    top: -5.5em;
+    top: -6em;
   }
 }
 .p-access__head-img {

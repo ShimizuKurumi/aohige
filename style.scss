@@ -1110,10 +1110,10 @@ a {
         margin-bottom: 2em;
 
         &.active {
-            top: -4em;
+            top: -5em;
 
-            @include media(md) {
-                top: -5.5em;
+            @include media(lg) {
+                top: -6em;
             }
         }
     }
