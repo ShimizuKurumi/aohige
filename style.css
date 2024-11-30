@@ -357,6 +357,7 @@ a {
 }
 
 .l-hamburger {
+  cursor: pointer !important;
   position: fixed;
   top: 40px;
   left: 5%;
@@ -517,8 +518,8 @@ a {
   max-width: 498px;
   position: relative;
   left: 0;
-  right: 0;
-  z-index: -1;
+  top: 0;
+  z-index: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -540,7 +541,7 @@ a {
 }
 .p-firstview__circletext {
   width: 40%;
-  margin-top: -20vh;
+  margin-top: -22vh;
   max-width: 175px;
   margin-left: auto;
   margin-right: auto;

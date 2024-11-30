@@ -84,10 +84,32 @@ $(function () {
 
 // var rellax = new Rellax('.rellax');
 
-luxy.init({
-    wrapper: '#luxy',
-    wrapperSpeed: 0.09, // スクロール速度の調整（デフォルト値は0.08）
-});
+var _ua = (function (u) {
+    return {
+        Tablet: (u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1)
+            || u.indexOf("ipad") != -1
+            || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
+            || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
+            || u.indexOf("kindle") != -1
+            || u.indexOf("silk") != -1
+            || u.indexOf("playbook") != -1,
+        Mobile: (u.indexOf("windows") != -1 && u.indexOf("phone") != -1)
+            || u.indexOf("iphone") != -1
+            || u.indexOf("ipod") != -1
+            || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1)
+            || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1)
+            || u.indexOf("blackberry") != -1
+    }
+})(window.navigator.userAgent.toLowerCase());
+
+if (!_ua.Mobile && !_ua.Tablet) {
+    luxy.init();
+}
+
+// luxy.init({
+//     wrapper: '#luxy',
+//     wrapperSpeed: 0.09, // スクロール速度の調整（デフォルト値は0.08）
+// });
 
 
 $(function () {
@@ -174,13 +196,13 @@ function showElements(entries) {
     });
 };
 
-document.querySelectorAll('.c-button--ticket a').addEventListener('mouseover', function () {
+document.querySelector('.c-button--ticket a').addEventListener('mouseover', function () {
     //任意の処理
     $('#stalker').addClass('active');
 
 });
 
-document.querySelectorAll('.c-button--ticket a').addEventListener('click', function () {
+document.querySelector('.c-button--ticket a').addEventListener('click', function () {
     //任意の処理
     $('#stalker').removeClass('active');
 });
@@ -198,7 +220,6 @@ const nav = $('.l-nav__wrapper--mobile');
 ham.on('click', function () { //ハンバーガーメニューをクリックしたら
     ham.toggleClass('active'); // ハンバーガーメニューにactiveクラスを付け外し
     nav.toggleClass('active'); // ナビゲーションメニューにactiveクラスを付け外し
-
 });
 
 
