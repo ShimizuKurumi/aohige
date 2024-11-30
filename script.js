@@ -86,7 +86,7 @@ $(function () {
 
 luxy.init({
     wrapper: '#luxy',
-    wrapperSpeed: 0.1, // スクロール速度の調整（デフォルト値は0.08）
+    wrapperSpeed: 0.09, // スクロール速度の調整（デフォルト値は0.08）
 });
 
 
@@ -174,18 +174,23 @@ function showElements(entries) {
     });
 };
 
-function isMobile() {
-    const userAgent = navigator.userAgent.toLowerCase();
-    return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
-}
+document.querySelectorAll('.c-button--ticket a').addEventListener('mouseover', function () {
+    //任意の処理
+    $('#stalker').addClass('active');
 
-if (isMobile()) {
-    console.log('モバイル端末です');
-    $('#stalker').css('display', 'none');
+});
 
-} else {
-    console.log('PCです');
-}
+document.querySelectorAll('.c-button--ticket a').addEventListener('click', function () {
+    //任意の処理
+    $('#stalker').removeClass('active');
+});
+
+
+// マウスが要素を離れた時
+document.querySelector('.c-button--ticket a').addEventListener('mouseleave', function () {
+    //任意の処理
+    $('#stalker').css('transform', 'scale(0)');
+});
 
 const ham = $('.l-hamburger');
 const nav = $('.l-nav__wrapper--mobile');

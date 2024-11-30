@@ -86,9 +86,14 @@ a {
     pointer-events: auto;
 }
 
+::selection {
+    background: $dark-gold;
+    color: $main-color;
+}
+
 
 //カーソル--------------------------------------
-.c-button--ticket {
+.c-button--ticket a {
     cursor: none;
     /* ブラウザのデフォルトカーソルを非表示 */
 }
@@ -96,6 +101,7 @@ a {
 /*ちょっと遅れてついてくるストーカー要素*/
 #stalker {
     position: fixed;
+    display: block;
 
     /*丸の大きさと色の指定*/
     width: 0.1em;
@@ -158,6 +164,7 @@ a {
         margin-right: auto;
     }
 
+
     &--map {
         width: 100%;
 
@@ -176,7 +183,7 @@ a {
             padding: 16px 40px;
             display: block;
             margin-bottom: 88px;
-            transition: .3s ease;
+            transition: .7s ease;
 
             &:hover {
                 background-color: $text-color;
@@ -204,6 +211,16 @@ a {
         padding: 24px;
         width: 100%;
         margin-bottom: 16px;
+
+        &__text {
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        &__description-img {
+            margin-bottom: 1em;
+            width: 100%;
+        }
 
         &__wrapper {
             @include media(sm) {
@@ -328,6 +345,13 @@ a {
 
 }
 
+.c-comingsoon {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 4em 0;
+}
+
 //ヘッダー--------------------------------------
 .l-header {
     position: relative;
@@ -377,7 +401,7 @@ a {
 
 .l-hamburger {
     position: fixed;
-    top: 24px;
+    top: 40px;
     left: 5%;
     background-color: transparent;
     border-color: transparent;
@@ -706,7 +730,6 @@ a {
     }
 
     &__title {
-        background-color: $text-color;
         color: $main-color;
         width: fit-content;
         margin-left: auto;
@@ -714,7 +737,25 @@ a {
         font-size: 1.25rem;
         font-weight: 600;
         margin-bottom: 24px;
+        position: relative;
+        overflow: hidden;
         padding-left: 8px;
+    }
+
+    &__title.active::before {
+        transform: translateX(-100%);
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $text-color;
+        transform-origin: left;
+        animation: .8s test_box_slide forwards ease;
+
     }
 
     &__text {
@@ -832,6 +873,14 @@ a {
         width: 100%;
         margin-bottom: 16px;
         font-weight: 600;
+        transform: translateY(20px);
+        transition: .8s ease;
+        opacity: 0;
+
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
         @include media(xl) {
             margin: 0;
@@ -843,6 +892,16 @@ a {
         width: 100%;
         line-height: 2.1;
         text-align: justify;
+        transform: translateY(20px);
+        transition: .8s ease;
+        opacity: 0;
+
+
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: .2s;
+        }
 
         @include media(md) {
             text-align: center;
@@ -952,7 +1011,7 @@ a {
     }
 
     &__text {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         line-height: 1.5;
         margin-bottom: 16px;
 
@@ -971,25 +1030,30 @@ a {
     }
 
     &__text-group {
-        width: 75%;
-        margin-left: 5%;
+        width: 90%;
+        margin-left: auto;
         margin-right: auto;
+        max-width: 1200px;
+        opacity: 0;
+        transition: .5s ease;
+        position: relative;
+        top: 30px;
 
-        @include media(sm) {
-            margin-left: 8%;
-        }
 
         @include media(md) {
-            margin-left: 10%;
+            width: 80%;
         }
 
-        @include media(lg) {
-            margin-left: 15%;
+        @include media(xl) {
+            width: 65%;
         }
 
-        @include media(xxl) {
-            margin-left: 20%;
+        &.active {
+            opacity: 1;
+            top: 0;
+            transition-delay: .1s;
         }
+
     }
 
 }
@@ -1003,6 +1067,7 @@ a {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+        max-width: 1200px;
 
         @include media(md) {
             width: 80%;
@@ -1020,7 +1085,11 @@ a {
         margin-bottom: 2em;
 
         &.active {
-            top: -6em;
+            top: -4em;
+
+            @include media(md) {
+                top: -5.5em;
+            }
         }
     }
 
@@ -1036,6 +1105,7 @@ a {
 
     &__address {
         margin-bottom: 40px;
+        line-height: 1.6;
     }
 
     &__title {
@@ -1064,6 +1134,8 @@ a {
 
     &__map-img {
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__theater,
@@ -1074,8 +1146,8 @@ a {
     }
 
     &__contents {
-        margin-bottom: 80px;
-        margin-top: -80px;
+        margin-bottom: 6em;
+        margin-top: -3em;
 
         @include media(lg) {
             display: flex;
@@ -1117,6 +1189,7 @@ a {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+        max-width: 1100px;
 
         @include media(lg) {
             width: 70%;
@@ -1332,7 +1405,7 @@ a {
         max-width: 690px;
         margin-right: auto;
         position: relative;
-        left: -80px;
+        left: -100px;
         transition: 1s ease;
 
         &.active {
@@ -1360,10 +1433,11 @@ a {
         margin-left: auto;
         margin-right: auto;
         position: relative;
-        top: 0px;
+        top: 22px;
         transition: 1s ease;
         transition-delay: 0.1s;
         opacity: 0;
+        max-width: 1400px;
 
         &.active {
             opacity: 1;
@@ -1413,9 +1487,13 @@ a {
 
 //ムービー-----------------------------------------
 .p-movie {
-    padding: 10em 0 6em;
+    padding: 6em 0 6em;
     background: url(./images/mable.png) no-repeat center/cover;
     position: relative;
+
+    &__inner {
+        margin-top: 4rem;
+    }
 
     &__head {
         width: 80%;
@@ -1423,10 +1501,10 @@ a {
         margin-left: auto;
         position: absolute;
         right: 0;
-        top: -15%;
+        top: -13vw;
 
         @include media(sm) {
-            top: -80px;
+            top: -73px;
         }
 
         @include media(lg) {
@@ -1591,7 +1669,7 @@ a {
         transition: .7s ease;
 
         &:hover {
-            bottom: 5%;
+            bottom: 4%;
         }
 
         &__text {
@@ -1734,5 +1812,52 @@ a {
 
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes tikatika {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease;
+    }
+
+    10% {
+        opacity: 1;
+        animation-timing-function: step-end;
+    }
+
+    20% {
+        opacity: 0;
+        animation-timing-function: ease;
+    }
+
+    30% {
+        opacity: 1;
+        animation-timing-function: step-end;
+    }
+
+    40% {
+        opacity: 0;
+        animation-timing-function: step-end;
+    }
+
+    60% {
+        opacity: 0;
+        animation-timing-function: ease;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes test_box_slide {
+    0% {
+        transform: translate(-100%, 0)
+    }
+
+    100% {
+        transform: translate(0, 0)
     }
 }
