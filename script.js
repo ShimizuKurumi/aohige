@@ -196,32 +196,51 @@ function showElements(entries) {
     });
 };
 
-document.querySelector('.c-button--ticket a').addEventListener('mouseover', function () {
-    //任意の処理
-    $('#stalker').addClass('active');
+
+$(document).ready(function () {
+    // ホバーさせたい要素のセレクタを指定
+    $('.c-button--ticket a').hover(
+        function () {
+            // マウスが乗った時の処理
+            $('#stalker').addClass('active');
+        },
+        function () {
+            // マウスが離れた時の処理
+            $('#stalker').removeClass('active');
+        }
+    );
+
+    $('.c-button--ticket a').click(
+        function () {
+            // マウスが乗った時の処理
+            $('#stalker').removeClass('active');
+        },
+    );
 
 });
 
-document.querySelector('.c-button--ticket a').addEventListener('click', function () {
-    //任意の処理
-    $('#stalker').removeClass('active');
+$(document).ready(function () {
+    // タッチされた要素のCSSを変更
+    $(".p-firstview__main_visual__wrapper").on("touchstart", function () {
+        $('.p-firstview__main_visual--2').toggleClass('active');
+    });
 });
 
 
-// マウスが要素を離れた時
-document.querySelector('.c-button--ticket a').addEventListener('mouseleave', function () {
-    //任意の処理
-    $('#stalker').css('transform', 'scale(0)');
-});
 
 const ham = $('.l-hamburger');
 const nav = $('.l-nav__wrapper--mobile');
+const aTag = $('.l-nav__link');
 
 ham.on('click', function () { //ハンバーガーメニューをクリックしたら
     ham.toggleClass('active'); // ハンバーガーメニューにactiveクラスを付け外し
     nav.toggleClass('active'); // ナビゲーションメニューにactiveクラスを付け外し
 });
 
+aTag.on('click', function () {
+    ham.removeClass('active'); // ハンバーガーメニューにactiveクラスを付け外し
+    nav.removeClass('active'); // ナビゲーションメニューにactiveクラスを付け外し
+})
 
 
 $(function () {
@@ -260,7 +279,7 @@ var bar = new ProgressBar.Line(loading__text, {//id名を指定
         style: {
             position: 'absolute',
             left: '50%',
-            top: '50%',
+            top: '54%',
             margin: '0',
             transform: 'translate(-50%,-50%)',
             'font-family': 'serif',
@@ -274,6 +293,32 @@ var bar = new ProgressBar.Line(loading__text, {//id名を指定
     }
 });
 
-bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画
-    $(".loading").delay(500).fadeOut(800);//アニメーションが終わったら#loadingをフェードアウト
+// bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画
+//     $(".loading").delay(500).fadeOut(800);//アニメーションが終わったら#loadingをフェードアウト
+// });
+
+
+// セッションストレージからフラグを取得
+const isFirstLoad = sessionStorage.getItem('isFirstLoad');
+
+// ページの読み込みが完了したときに実行される関数
+window.addEventListener('load', function () {
+    // フラグがない場合（初回アクセス時）
+    if (!isFirstLoad) {
+        // 初回アクセス時の処理を記述
+        // 例: ローディング画面の表示、セッションストレージへのフラグの保存など
+        console.log('初回アクセスです');
+        function showLoading() {
+            bar.animate(1.0, function () {
+                $(".loading").delay(500).fadeOut(800);
+                $(".loading").css('display', 'block');
+            });
+        }
+
+        // セッションストレージにフラグを保存
+        sessionStorage.setItem('isFirstLoad', true);
+    } else {
+        // 2回目以降のアクセス時の処理を記述
+        console.log('2回目以降のアクセスです');
+    }
 });
