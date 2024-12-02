@@ -952,15 +952,44 @@ a {
   margin-bottom: 7px;
   margin-right: 8px;
 }
+.p-schedule__subtitle {
+  margin-bottom: 16px;
+}
+.p-schedule__performance-group {
+  margin-top: 2em;
+  padding: 1.3em;
+  border: #F9EFE1 1px solid;
+  width: 100%;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+}
+@media (576px <= width) {
+  .p-schedule__performance-group {
+    width: 70%;
+  }
+}
 .p-schedule__text {
   font-size: 1.125rem;
   line-height: 1.5;
-  margin-bottom: 16px;
 }
 @media (576px <= width) {
   .p-schedule__text {
     font-size: 1.2rem;
   }
+}
+.p-schedule__text--big {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+.p-schedule__text--color {
+  color: #C4B093;
+}
+.p-schedule__text--sub {
+  margin-bottom: 0.5em;
+  line-height: 1.7;
+}
+.p-schedule__text--sub:last-child {
+  margin-bottom: 0;
 }
 .p-schedule__bold {
   font-weight: 600;
@@ -968,6 +997,7 @@ a {
 .p-schedule__attention {
   margin-bottom: 8px;
   line-height: 1.6;
+  margin-top: 8px;
 }
 .p-schedule__text-group {
   width: 90%;
@@ -994,9 +1024,12 @@ a {
   top: 0;
   transition-delay: 0.1s;
 }
+.p-schedule__small {
+  font-size: 0.9375rem;
+}
 
 .p-access {
-  margin-bottom: 10em;
+  margin-bottom: 8em;
 }
 .p-access__inner {
   width: 90%;

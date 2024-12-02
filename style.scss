@@ -1069,13 +1069,46 @@ a {
         }
     }
 
+    &__subtitle {
+        margin-bottom: 16px;
+    }
+
+    &__performance-group {
+        margin-top: 2em;
+        padding: 1.3em;
+        border: $text-color 1px solid;
+        width: 100%;
+        backdrop-filter: blur(12px);
+
+        @include media(sm) {
+            width: 70%;
+        }
+    }
+
     &__text {
         font-size: 1.125rem;
         line-height: 1.5;
-        margin-bottom: 16px;
 
         @include media(sm) {
             font-size: 1.2rem;
+        }
+
+        &--big {
+            font-size: 1.125rem;
+            line-height: 1.6;
+        }
+
+        &--color {
+            color: $dark-gold;
+        }
+
+        &--sub {
+            margin-bottom: 0.5em;
+            line-height: 1.7;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -1086,6 +1119,7 @@ a {
     &__attention {
         margin-bottom: 8px;
         line-height: 1.6;
+        margin-top: 8px;
     }
 
     &__text-group {
@@ -1115,12 +1149,16 @@ a {
 
     }
 
+    &__small {
+        font-size: 0.9375rem;
+    }
+
 }
 
 //アクセス--------------------------------------
 
 .p-access {
-    margin-bottom: 10em;
+    margin-bottom: 8em;
 
     &__inner {
         width: 90%;
