@@ -221,7 +221,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     // タッチされた要素のCSSを変更
-    $(".p-firstview__main_visual__wrapper").on("touchstart", function () {
+    $(".p-firstview__aohigelogo").on("touchstart", function () {
         $('.p-firstview__main_visual--2').toggleClass('active');
     });
 });
