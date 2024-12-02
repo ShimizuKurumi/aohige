@@ -24,7 +24,7 @@ $breakpoints: (
 //基本--------------------------------------
 body,
 html {
-    font-size: 16px;
+    font-size: 15px;
     font-family: "Zen Old Mincho",
         serif;
     letter-spacing: 0.08em;
@@ -36,11 +36,11 @@ html {
     background-color: $main-color;
 
     @include media(sm) {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     @include media(md) {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     @include media(lg) {
@@ -686,7 +686,7 @@ a {
 
 //バナー-------------------------------------------
 .p-banner {
-    margin-bottom: 5em;
+    margin-bottom: 10em;
     max-width: 604px;
     margin-left: auto;
     margin-right: auto;
@@ -710,7 +710,7 @@ a {
 
 //イントロダクション--------------------------------
 .p-introduction {
-    margin-bottom: 6.5em;
+    margin-bottom: 10em;
 
     &__head-img {
         width: 100%;
@@ -858,7 +858,7 @@ a {
 
 //ストーリー-----------------------------------
 .p-story {
-    margin-bottom: 6em;
+    margin-bottom: 10em;
 
 
     &__inner {
@@ -992,7 +992,7 @@ a {
 //スケジュール----------------------------------
 .p-schedule {
     position: relative;
-    padding: 8em 0 6em;
+    padding: 10em 0 10em;
     z-index: 2;
     background-position: center;
     background-repeat: no-repeat;
@@ -1158,7 +1158,7 @@ a {
 //アクセス--------------------------------------
 
 .p-access {
-    margin-bottom: 8em;
+    margin-bottom: 11em;
 
     &__inner {
         width: 90%;
@@ -1183,6 +1183,10 @@ a {
 
         &.active {
             top: -3.5em;
+
+            @include media(sm) {
+                top: -5em;
+            }
 
             @include media(lg) {
                 top: -6em;
@@ -1258,7 +1262,7 @@ a {
 
 //チケット----------------------------------------------------
 .p-ticket {
-    padding-bottom: 7em;
+    padding-bottom: 10em;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1299,7 +1303,7 @@ a {
     &__category {
         font-size: 1.25rem;
         margin-bottom: 8px;
-        margin-top: 40px;
+        margin-top: 3em;
     }
 
     &__price {
@@ -1497,7 +1501,7 @@ a {
 
 //コメント----------------------------------------------
 .p-comment {
-    padding: 5em 0;
+    padding: 7em 0 10em;
 
 
     &__head {
@@ -1587,7 +1591,7 @@ a {
 
 //ムービー-----------------------------------------
 .p-movie {
-    padding: 6em 0 6em;
+    padding: 10em 0 10em;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
@@ -1669,7 +1673,7 @@ a {
 //フッター------------------------------
 .l-footer {
     position: relative;
-    padding: 4.5em 0;
+    padding: 10em 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
