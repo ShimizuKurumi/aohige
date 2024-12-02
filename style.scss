@@ -19,6 +19,8 @@ $breakpoints: (
     }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
+
 //基本--------------------------------------
 body,
 html {
@@ -984,6 +986,7 @@ a {
         transform: translateY(20px);
         transition: .8s ease;
         opacity: 0;
+        font-size: 0.9375rem;
 
 
         &.active {
@@ -1191,7 +1194,7 @@ a {
 
     &__taigenteikoukan {
         width: 100%;
-        max-width: 219px;
+        max-width: 200px;
         margin-bottom: 16px;
     }
 
@@ -1581,7 +1584,7 @@ a {
 //ムービー-----------------------------------------
 .p-movie {
     padding: 6em 0 6em;
-    background: url(./images/mable.png) no-repeat center/cover;
+    background: url(./images/mable.jpg) no-repeat center/cover;
     position: relative;
 
     &__inner {

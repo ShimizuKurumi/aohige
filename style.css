@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap");
 body,
 html {
   font-size: 16px;
@@ -862,6 +863,7 @@ a {
   transform: translateY(20px);
   transition: 0.8s ease;
   opacity: 0;
+  font-size: 0.9375rem;
 }
 .p-story__text.active {
   transform: translateY(0);
@@ -1025,7 +1027,7 @@ a {
 }
 .p-access__taigenteikoukan {
   width: 100%;
-  max-width: 219px;
+  max-width: 200px;
   margin-bottom: 16px;
 }
 .p-access__address {
@@ -1364,7 +1366,7 @@ a {
 
 .p-movie {
   padding: 6em 0 6em;
-  background: url(./images/mable.png) no-repeat center/cover;
+  background: url(./images/mable.jpg) no-repeat center/cover;
   position: relative;
 }
 .p-movie__inner {
