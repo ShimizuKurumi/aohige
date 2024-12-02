@@ -10,6 +10,7 @@ html {
   overflow-x: hidden;
   position: relative;
   width: 100%;
+  background-color: #0B1632;
 }
 @media (576px <= width) {
   body,
@@ -703,7 +704,9 @@ a {
   margin-top: -50px;
 }
 .p-introduction__bg {
-  background: url(./images/aohige_intro.jpg) no-repeat center/cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 120%;
   margin-inline: auto;
   position: relative;
@@ -818,9 +821,9 @@ a {
   height: 120%;
   margin-inline: auto;
   width: 100%;
-  background: url(./images/aohige_story1.jpg) no-repeat center/cover;
-  /* 初期状態では非表示 */
-  /* フェードイン/アウトのアニメーション */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .p-story__head {
   width: 25%;
@@ -884,8 +887,10 @@ a {
 .p-schedule {
   position: relative;
   padding: 8em 0 6em;
-  background: url(./images/aohige_schedule.jpg) no-repeat center/cover;
   z-index: 2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (992px <= width) {
   .p-schedule {
@@ -1077,8 +1082,10 @@ a {
 }
 
 .p-ticket {
-  background: url(./images/ticketbg.jpg) no-repeat center/cover;
   padding-bottom: 7em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .p-ticket__head {
   width: 90%;
@@ -1366,8 +1373,10 @@ a {
 
 .p-movie {
   padding: 6em 0 6em;
-  background: url(./images/mable.jpg) no-repeat center/cover;
   position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .p-movie__inner {
   margin-top: 4rem;
@@ -1439,7 +1448,9 @@ a {
 .l-footer {
   position: relative;
   padding: 4.5em 0;
-  background: url(./images/footer.jpg) no-repeat center/cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .l-footer__inner {
   width: 90%;
