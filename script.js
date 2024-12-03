@@ -352,12 +352,13 @@ window.addEventListener('load', function () {
         // 初回アクセス時の処理を記述
         // 例: ローディング画面の表示、セッションストレージへのフラグの保存など
         console.log('初回アクセスです');
-        $('.loading').css('display', 'block');
 
         // セッションストレージにフラグを保存
         sessionStorage.setItem('isFirstLoad', true);
     } else {
         // 2回目以降のアクセス時の処理を記述
         console.log('2回目以降のアクセスです');
+        $('.loading').css('display', 'none');
+
     }
 });
