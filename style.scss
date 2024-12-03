@@ -758,7 +758,7 @@ a {
             }
 
             &.active {
-                top: -18px;
+                top: 0;
 
                 @include media(md) {
                     top: -5%;
@@ -771,7 +771,7 @@ a {
             max-width: 700px;
             transition: ease 1s;
             position: relative;
-            top: -80px;
+            top: -100px;
             z-index: 0;
 
             @include media(lg) {
@@ -779,7 +779,7 @@ a {
             }
 
             &.active {
-                top: 0;
+                top: 0px;
             }
 
         }
@@ -812,16 +812,26 @@ a {
         overflow: hidden;
         margin-inline: auto;
         margin-top: -50px;
+
+        @include media(xl) {
+            margin-top: -50px;
+        }
     }
 
     &__bg {
-        background-position: center;
+        background-position: 60% 24px;
+
+        @include media(lg) {
+            background-position: 60% 35%;
+        }
+
         background-repeat: no-repeat;
         background-size: cover;
-        height: 120%;
+        height: 100%;
         margin-inline: auto;
         position: relative;
         width: 100%;
+
     }
 
     &__text-and-img {
@@ -837,6 +847,7 @@ a {
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+
     }
 
     &__title {
@@ -870,6 +881,7 @@ a {
 
     &__text {
         line-height: 2.1;
+        font-size: 0.9375rem;
     }
 }
 
@@ -1235,10 +1247,11 @@ a {
     &__address {
         margin-bottom: 40px;
         line-height: 1.6;
+        font-size: 0.875rem;
     }
 
     &__title {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         margin-bottom: 24px;
         margin-top: 40px;
         font-weight: 600;
@@ -1260,6 +1273,7 @@ a {
 
     &__description {
         line-height: 2.2;
+        font-size: 0.875rem;
     }
 
     &__map-img {
