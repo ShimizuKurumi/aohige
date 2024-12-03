@@ -727,10 +727,10 @@ a {
   }
 }
 .p-introduction__bg {
-  background-position: 60% 24px;
+  background-position: 60% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  height: 105%;
   margin-inline: auto;
   position: relative;
   width: 100%;
@@ -738,6 +738,7 @@ a {
 @media (992px <= width) {
   .p-introduction__bg {
     background-position: 60% 35%;
+    height: 100%;
   }
 }
 .p-introduction__text-and-img {
