@@ -1936,6 +1936,7 @@ a {
   100% {
     opacity: 0;
     display: none;
+    z-index: -50;
   }
 }
 @keyframes displaynone {
@@ -1945,6 +1946,7 @@ a {
   100% {
     opacity: 0;
     display: none;
+    z-index: -50;
   }
 }
 /*# sourceMappingURL=style.css.map */
