@@ -270,34 +270,34 @@ $(function () {
 });
 
 
-//テキストのカウントアップの設定
-var bar = new ProgressBar.Line(loading__text, {//id名を指定
-    strokeWidth: 0,//進捗ゲージの太さ
-    duration: 1000,//時間指定(1000＝1秒)
-    trailWidth: 0,//線の太さ
-    text: {//テキストの形状を直接指定
-        style: {
-            position: 'absolute',
-            left: '50%',
-            top: '54%',
-            margin: '0',
-            transform: 'translate(-50%,-50%)',
-            'font-family': 'serif',
-            'font-size': '1.5rem',
-            color: '#fff',
-        },
-        autoStyleContainer: false //自動付与のスタイルを切る
-    },
-    step: function (state, bar) {
-        bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
-    }
-});
+// //テキストのカウントアップの設定
+// var bar = new ProgressBar.Line(loading__text, {//id名を指定
+//     strokeWidth: 0,//進捗ゲージの太さ
+//     duration: 1000,//時間指定(1000＝1秒)
+//     trailWidth: 0,//線の太さ
+//     text: {//テキストの形状を直接指定
+//         style: {
+//             position: 'absolute',
+//             left: '50%',
+//             top: '54%',
+//             margin: '0',
+//             transform: 'translate(-50%,-50%)',
+//             'font-family': 'serif',
+//             'font-size': '1.5rem',
+//             color: '#fff',
+//         },
+//         autoStyleContainer: false //自動付与のスタイルを切る
+//     },
+//     step: function (state, bar) {
+//         bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
+//     }
+// });
 
-bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画
-    $(".loading").delay(500).fadeOut(800);//アニメーションが終わったら#loadingをフェードアウト
-    $(".loading").css('display', 'block');
+// bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画
+//     $(".loading").delay(500).fadeOut(800);//アニメーションが終わったら#loadingをフェードアウト
+//     $(".loading").css('display', 'block');
 
-});
+// });
 
 
 
@@ -316,3 +316,48 @@ bar.animate(1.0, function () {//バーを描画する割合を指定します 1.
 //         });
 //     }
 // });
+
+$(function () {
+    var countElm = $('.count'),
+        countSpeed = 10;
+
+    countElm.each(function () {
+        var self = $(this),
+            countMax = self.attr('data-num'),
+            thisCount = self.text(),
+            countTimer;
+
+        function timer() {
+            countTimer = setInterval(function () {
+                var countNext = thisCount++;
+                self.text(countNext);
+
+                if (countNext == countMax) {
+                    clearInterval(countTimer);
+                }
+            }, countSpeed);
+        }
+        timer();
+    });
+
+});
+
+// セッションストレージからフラグを取得
+const isFirstLoad = sessionStorage.getItem('isFirstLoad');
+
+// ページの読み込みが完了したときに実行される関数
+window.addEventListener('load', function () {
+    // フラグがない場合（初回アクセス時）
+    if (!isFirstLoad) {
+        // 初回アクセス時の処理を記述
+        // 例: ローディング画面の表示、セッションストレージへのフラグの保存など
+        console.log('初回アクセスです');
+        $('.loading').css('display', 'block');
+
+        // セッションストレージにフラグを保存
+        sessionStorage.setItem('isFirstLoad', true);
+    } else {
+        // 2回目以降のアクセス時の処理を記述
+        console.log('2回目以降のアクセスです');
+    }
+});

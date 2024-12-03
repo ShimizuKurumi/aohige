@@ -468,6 +468,15 @@ a {
     background: $main-color;
     text-align: center;
     display: none;
+    animation: displaynone 1s ease forwards;
+    animation-delay: 1.5s;
+
+    &__text {
+        position: fixed;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     &__img {
         &--1 {
@@ -487,11 +496,15 @@ a {
             top: 45%;
             left: 50%;
             opacity: 0;
-            animation: opacity3 ease .7s forwards;
+            animation: opacity3 ease .6s forwards;
             animation-delay: 1s;
             transform: translate(-50%, -50%);
         }
     }
+}
+
+.count {
+    font-size: 1.5rem;
 }
 
 //ファーストビュー--------------------------------------
@@ -2040,5 +2053,16 @@ a {
 
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes displaynone {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
     }
 }
