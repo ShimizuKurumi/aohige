@@ -497,7 +497,7 @@ a {
 //ファーストビュー--------------------------------------
 .p-firstview {
     padding-top: 24px;
-    margin-bottom: 3.5em;
+    margin-bottom: 3.25em;
     position: relative;
 
     &__credit {
@@ -686,7 +686,7 @@ a {
 
 //バナー-------------------------------------------
 .p-banner {
-    margin-bottom: 10em;
+    margin-bottom: 6.25em;
     max-width: 604px;
     margin-left: auto;
     margin-right: auto;
@@ -710,7 +710,11 @@ a {
 
 //イントロダクション--------------------------------
 .p-introduction {
-    margin-bottom: 10em;
+    margin-bottom: 6.25em;
+
+    @include media(lg) {
+        margin-bottom: 10em;
+    }
 
     &__head-img {
         width: 100%;
@@ -858,8 +862,11 @@ a {
 
 //ストーリー-----------------------------------
 .p-story {
-    margin-bottom: 10em;
+    margin-bottom: 6.25em;
 
+    @include media(lg) {
+        margin-bottom: 10em;
+    }
 
     &__inner {
         @include media(xl) {
@@ -992,11 +999,15 @@ a {
 //スケジュール----------------------------------
 .p-schedule {
     position: relative;
-    padding: 10em 0 10em;
+    padding: 6.25em 0 6.25em;
     z-index: 2;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include media(lg) {
+        padding: 10em 0 10em;
+    }
 
     @include media(lg) {
         padding-top: 8em;
@@ -1158,7 +1169,11 @@ a {
 //アクセス--------------------------------------
 
 .p-access {
-    margin-bottom: 11em;
+    margin-bottom: 6.25em;
+
+    @include media(lg) {
+        margin-bottom: 10em;
+    }
 
     &__inner {
         width: 90%;
@@ -1262,10 +1277,14 @@ a {
 
 //チケット----------------------------------------------------
 .p-ticket {
-    padding-bottom: 10em;
+    padding-bottom: 6.25em;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include media(lg) {
+        padding-bottom: 10em;
+    }
 
     &__head {
         width: 90%;
@@ -1296,7 +1315,7 @@ a {
         max-width: 1100px;
 
         @include media(lg) {
-            width: 70%;
+            width: 80%;
         }
     }
 
@@ -1501,8 +1520,11 @@ a {
 
 //コメント----------------------------------------------
 .p-comment {
-    padding: 7em 0 10em;
+    padding: 3.5em 0 6.25em;
 
+    @include media(lg) {
+        padding: 6em 0 10em;
+    }
 
     &__head {
         width: 100%;
@@ -1591,11 +1613,15 @@ a {
 
 //ムービー-----------------------------------------
 .p-movie {
-    padding: 10em 0 10em;
+    padding: 6.25em 0 6.25em;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include media(lg) {
+        padding: 10em 0 10em;
+    }
 
     &__inner {
         margin-top: 4rem;
@@ -1673,7 +1699,12 @@ a {
 //フッター------------------------------
 .l-footer {
     position: relative;
-    padding: 10em 0;
+    padding: 6.25em 0;
+
+    @include media(lg) {
+        padding: 10em 0;
+    }
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1763,7 +1794,7 @@ a {
 
     &__copy {
         text-align: center;
-        margin-top: 76px;
+        margin-top: 40px;
         opacity: 0.5;
     }
 
@@ -1861,7 +1892,7 @@ a {
         border-top: $text-color 1px solid;
         border-bottom: $text-color 1px solid;
         gap: 1.5em 2em;
-        margin-bottom: 5em;
+        margin-bottom: 6.25em;
 
         .l-nav__item--english {
             color: $dark-gold;
