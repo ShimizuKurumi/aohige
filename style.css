@@ -1556,7 +1556,7 @@ a {
 .l-footer__link {
   display: block;
   width: 100%;
-  max-width: 210px;
+  max-width: 160px;
   margin-left: auto;
   margin-right: auto;
 }

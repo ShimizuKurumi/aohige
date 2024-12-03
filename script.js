@@ -293,32 +293,26 @@ var bar = new ProgressBar.Line(loading__text, {//id名を指定
     }
 });
 
-// bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画
-//     $(".loading").delay(500).fadeOut(800);//アニメーションが終わったら#loadingをフェードアウト
-// });
+bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画
+    $(".loading").delay(500).fadeOut(800);//アニメーションが終わったら#loadingをフェードアウト
+    $(".loading").css('display', 'block');
 
-
-// セッションストレージからフラグを取得
-const isFirstLoad = sessionStorage.getItem('isFirstLoad');
-
-// ページの読み込みが完了したときに実行される関数
-window.addEventListener('load', function () {
-    // フラグがない場合（初回アクセス時）
-    if (!isFirstLoad) {
-        // 初回アクセス時の処理を記述
-        // 例: ローディング画面の表示、セッションストレージへのフラグの保存など
-        console.log('初回アクセスです');
-        function showLoading() {
-            bar.animate(1.0, function () {
-                $(".loading").delay(500).fadeOut(800);
-                $(".loading").css('display', 'block');
-            });
-        }
-
-        // セッションストレージにフラグを保存
-        sessionStorage.setItem('isFirstLoad', true);
-    } else {
-        // 2回目以降のアクセス時の処理を記述
-        console.log('2回目以降のアクセスです');
-    }
 });
+
+
+
+// $(document).ready(function () {
+//     // ローカルストレージから表示済みか否かの情報を読み込む
+//     var isLoaded = localStorage.getItem('isLoaded');
+
+//     // 初回アクセス時のみローディング画面を表示
+//     if (!isLoaded) {
+//         bar.animate(1.0, function () {
+//             $(".loading").delay(0).fadeOut(500);
+//             $(".loading").css('display', 'block');
+
+//             // ローカルストレージに表示済み情報を保存
+//             localStorage.setItem('isLoaded', true);
+//         });
+//     }
+// });
