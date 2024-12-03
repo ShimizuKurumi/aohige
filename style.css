@@ -963,7 +963,7 @@ a {
   margin-left: auto;
 }
 .p-schedule__title {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   margin-bottom: 24px;
   margin-top: 64px;
   font-weight: 600;
@@ -977,7 +977,7 @@ a {
   height: 1px;
   display: inline-block;
   background-color: #F9EFE1;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
   margin-right: 8px;
 }
 .p-schedule__subtitle {
