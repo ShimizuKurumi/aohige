@@ -162,6 +162,15 @@ a {
 }
 
 //共通-------------------------------------------
+
+.mouse-over {
+    @include media(xl) {
+        &:hover~.p-firstview__main_visual__wrapper .p-firstview__main_visual--2 {
+            opacity: 1;
+        }
+    }
+}
+
 .c-button {
     width: 100%;
     margin-left: auto;
@@ -592,6 +601,7 @@ a {
             top: 37%;
             left: 50%;
             transform: translateX(-450px);
+            z-index: 3;
         }
     }
 
@@ -644,12 +654,6 @@ a {
         width: 18%;
         position: relative;
         z-index: 3;
-
-        @include media(xl) {
-            &:hover+.p-firstview__main_visual__wrapper .p-firstview__main_visual--2 {
-                opacity: 1;
-            }
-        }
     }
 
     &__main_visual {
@@ -686,12 +690,22 @@ a {
 
     &__circletext {
         width: 40%;
-        margin-top: -22vh;
+        // margin-top: -10vh;
         max-width: 175px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: 3;
         margin-left: auto;
         margin-right: auto;
         animation: 6s linear infinite rotation;
         mix-blend-mode: difference;
+
+        @include media(xl) {
+            &:hover~.p-firstview__main_visual--2 {
+                opacity: 1;
+            }
+        }
     }
 
 }
@@ -1950,11 +1964,11 @@ a {
 //アニメーション
 @keyframes rotation {
     0% {
-        transform: rotate(0);
+        transform: translate(-50%, 50%)rotate(0);
     }
 
     100% {
-        transform: rotate(360deg);
+        transform: translate(-50%, 50%)rotate(360deg);
     }
 }
 

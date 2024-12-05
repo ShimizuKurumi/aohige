@@ -147,6 +147,12 @@ a {
   transform: translateX(-50%);
 }
 
+@media (1200px <= width) {
+  .mouse-over:hover ~ .p-firstview__main_visual__wrapper .p-firstview__main_visual--2 {
+    opacity: 1;
+  }
+}
+
 .c-button {
   width: 100%;
   margin-left: auto;
@@ -529,6 +535,7 @@ a {
   top: 37%;
   left: 50%;
   transform: translateX(-450px);
+  z-index: 3;
 }
 .p-firstview__taigenlogo {
   width: 100%;
@@ -571,11 +578,6 @@ a {
   position: relative;
   z-index: 3;
 }
-@media (1200px <= width) {
-  .p-firstview__aohigelogo:hover + .p-firstview__main_visual__wrapper .p-firstview__main_visual--2 {
-    opacity: 1;
-  }
-}
 .p-firstview__main_visual {
   width: 100%;
   max-width: 498px;
@@ -607,13 +609,21 @@ a {
 }
 .p-firstview__circletext {
   width: 40%;
-  margin-top: -22vh;
   max-width: 175px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 3;
   margin-left: auto;
   margin-right: auto;
   -webkit-animation: 6s linear infinite rotation;
           animation: 6s linear infinite rotation;
   mix-blend-mode: difference;
+}
+@media (1200px <= width) {
+  .p-firstview__circletext:hover ~ .p-firstview__main_visual--2 {
+    opacity: 1;
+  }
 }
 
 .p-banner {
@@ -1734,19 +1744,19 @@ a {
 
 @-webkit-keyframes rotation {
   0% {
-    transform: rotate(0);
+    transform: translate(-50%, 50%) rotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(-50%, 50%) rotate(360deg);
   }
 }
 
 @keyframes rotation {
   0% {
-    transform: rotate(0);
+    transform: translate(-50%, 50%) rotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(-50%, 50%) rotate(360deg);
   }
 }
 @-webkit-keyframes opacityAnime {
