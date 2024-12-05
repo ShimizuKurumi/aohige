@@ -758,7 +758,7 @@ a {
             }
 
             &.active {
-                top: 0;
+                top: -1.5em;
 
                 @include media(md) {
                     top: -5%;
@@ -1123,7 +1123,7 @@ a {
     }
 
     &__text {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         line-height: 1.5;
 
         @include media(sm) {
@@ -1400,6 +1400,7 @@ a {
     &__link {
         text-decoration: underline 1px $text-color;
         margin-left: 8px;
+        -webkit-text-decoration: underline 1px $text-color;
     }
 
     &__small {
@@ -1524,15 +1525,20 @@ a {
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
-        font-size: 1.375rem;
+        font-size: 4.5vw;
         font-weight: 600;
         line-height: 1.3;
         margin-bottom: 16px;
+
+        @include media(sm) {
+            font-size: 1.375rem;
+        }
     }
 
     &__text {
         margin-bottom: 40px;
         line-height: 1.6;
+        font-size: 0.9375rem;
 
         @include media(md) {
             text-align: center;

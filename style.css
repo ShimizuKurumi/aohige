@@ -669,7 +669,7 @@ a {
   }
 }
 .p-introduction__head--intro.active {
-  top: 0;
+  top: -1.5em;
 }
 @media (768px <= width) {
   .p-introduction__head--intro.active {
@@ -1009,7 +1009,7 @@ a {
   }
 }
 .p-schedule__text {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.5;
 }
 @media (576px <= width) {
@@ -1253,9 +1253,9 @@ a {
   opacity: 1;
 }
 .p-ticket__link {
-  -webkit-text-decoration: underline 1px #F9EFE1;
-          text-decoration: underline 1px #F9EFE1;
+  text-decoration: underline 1px #F9EFE1;
   margin-left: 8px;
+  -webkit-text-decoration: underline 1px #F9EFE1;
 }
 .p-ticket__small {
   font-size: 0.875rem;
@@ -1364,14 +1364,20 @@ a {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.375rem;
+  font-size: 4.5vw;
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 16px;
 }
+@media (576px <= width) {
+  .p-ticket__title {
+    font-size: 1.375rem;
+  }
+}
 .p-ticket__text {
   margin-bottom: 40px;
   line-height: 1.6;
+  font-size: 0.9375rem;
 }
 @media (768px <= width) {
   .p-ticket__text {
