@@ -619,6 +619,7 @@ a {
   -webkit-animation: 6s linear infinite rotation;
           animation: 6s linear infinite rotation;
   mix-blend-mode: difference;
+  translate: -50% 50%;
 }
 @media (1200px <= width) {
   .p-firstview__circletext:hover ~ .p-firstview__main_visual--2 {
@@ -1744,19 +1745,19 @@ a {
 
 @-webkit-keyframes rotation {
   0% {
-    transform: translate(-50%, 50%) rotate(0);
+    rotate: 0;
   }
   100% {
-    transform: translate(-50%, 50%) rotate(360deg);
+    rotate: 360deg;
   }
 }
 
 @keyframes rotation {
   0% {
-    transform: translate(-50%, 50%) rotate(0);
+    rotate: 0;
   }
   100% {
-    transform: translate(-50%, 50%) rotate(360deg);
+    rotate: 360deg;
   }
 }
 @-webkit-keyframes opacityAnime {
