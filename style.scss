@@ -712,6 +712,7 @@ a {
         margin-right: auto;
         animation: 6s linear infinite rotation;
         mix-blend-mode: difference;
+        will-change: transform;
         translate: -50% 50%;
 
 

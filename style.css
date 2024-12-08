@@ -630,6 +630,7 @@ a {
   -webkit-animation: 6s linear infinite rotation;
           animation: 6s linear infinite rotation;
   mix-blend-mode: difference;
+  will-change: transform;
   translate: -50% 50%;
 }
 @media (1200px <= width) {
