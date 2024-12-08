@@ -1,3 +1,15 @@
+
+
+$(document).ready(function () {
+    if ($(window).width() > 1024) { //768px未満の時
+        luxy.init({
+            wrapper: '#luxy',
+            wrapperSpeed: 0.09, // スクロール速度の調整（デフォルト値は0.08）
+        });
+    };
+});
+
+
 $(function () {
     var isDown = true;
     var isLeft = true;
@@ -85,24 +97,6 @@ $(function () {
 // var rellax = new Rellax('.rellax', {
 //     center: true
 // });
-
-$(window).on('load', function () { //ページが読み込まれた時に実行
-
-    var ua = navigator.userAgent;
-
-    if (ua.indexOf('iPhone') > 0 || (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0)) {
-        // スマホ用の処理
-    } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
-        // タブレット用の処理
-    } else {
-        // PC用の処理
-        luxy.init({
-            wrapper: '#luxy',
-            wrapperSpeed: 0.09, // スクロール速度の調整（デフォルト値は0.08）
-        });
-
-    }
-});
 
 
 $(function () {
