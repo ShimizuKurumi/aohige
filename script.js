@@ -86,19 +86,23 @@ $(function () {
 //     center: true
 // });
 
-if (navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('Mobile') > 0) {
-    // スマートフォン向けの記述
-} else if (navigator.userAgent.indexOf('iPad') > 0 || navigator.userAgent.indexOf('Android') > 0) {
-    // タブレット向けの記述
-} else {
-    // PC向けの記述
-    luxy.init({
-        wrapper: '#luxy',
-        wrapperSpeed: 0.09, // スクロール速度の調整（デフォルト値は0.08）
-    });
-}
+$(window).on('load', function () { //ページが読み込まれた時に実行
 
+    var ua = navigator.userAgent;
 
+    if (ua.indexOf('iPhone') > 0 || (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0)) {
+        // スマホ用の処理
+    } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+        // タブレット用の処理
+    } else {
+        // PC用の処理
+        luxy.init({
+            wrapper: '#luxy',
+            wrapperSpeed: 0.09, // スクロール速度の調整（デフォルト値は0.08）
+        });
+
+    }
+});
 
 
 $(function () {

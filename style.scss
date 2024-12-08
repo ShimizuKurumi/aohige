@@ -57,6 +57,7 @@ html {
     position: relative;
     z-index: -2;
     display: block;
+
 }
 
 img {
@@ -88,7 +89,7 @@ small {
 }
 
 .wrapper {
-    width: 90%;
+    width: 65%;
     max-width: 604px;
     margin-left: auto;
     margin-right: auto;
@@ -183,6 +184,7 @@ a {
         max-width: 604px;
         margin-left: auto;
         margin-right: auto;
+
     }
 
 
@@ -311,6 +313,7 @@ a {
             margin-top: 16px;
             width: fit-content;
             padding: 2px;
+            background-color: $main-color;
         }
     }
 
@@ -382,7 +385,7 @@ a {
     &--pc {
         display: none;
 
-        @include media(md) {
+        @include media(lg) {
             display: block;
             width: 90%;
             max-width: 1232px;
@@ -398,7 +401,7 @@ a {
         left: 0;
         z-index: 99;
 
-        @include media(md) {
+        @include media(lg) {
             display: none;
         }
     }
@@ -598,9 +601,10 @@ a {
     &__time {
         &--pc {
             position: absolute;
-            top: 37%;
+            top: 75%;
             left: 50%;
-            transform: translateX(-450px);
+            // transform: translateX(-450px);
+            translate: -450px -47vh;
             z-index: 3;
         }
     }
@@ -654,6 +658,14 @@ a {
         width: 18%;
         position: relative;
         z-index: 3;
+
+        @include media(lg) {
+            margin-top: 5em;
+        }
+
+        @include media(xl) {
+            margin-top: 0;
+        }
     }
 
     &__main_visual {

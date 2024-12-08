@@ -75,7 +75,7 @@ small {
 }
 
 .wrapper {
-  width: 90%;
+  width: 65%;
   max-width: 604px;
   margin-left: auto;
   margin-right: auto;
@@ -276,6 +276,7 @@ a {
   width: -moz-fit-content;
   width: fit-content;
   padding: 2px;
+  background-color: #0B1632;
 }
 .c-detail__credit {
   margin-bottom: 32px;
@@ -335,7 +336,7 @@ a {
 .l-header--pc {
   display: none;
 }
-@media (768px <= width) {
+@media (992px <= width) {
   .l-header--pc {
     display: block;
     width: 90%;
@@ -351,7 +352,7 @@ a {
   left: 0;
   z-index: 99;
 }
-@media (768px <= width) {
+@media (992px <= width) {
   .l-header--mobile {
     display: none;
   }
@@ -532,9 +533,9 @@ a {
 }
 .p-firstview__time--pc {
   position: absolute;
-  top: 37%;
+  top: 75%;
   left: 50%;
-  transform: translateX(-450px);
+  translate: -450px -47vh;
   z-index: 3;
 }
 .p-firstview__taigenlogo {
@@ -577,6 +578,16 @@ a {
   width: 18%;
   position: relative;
   z-index: 3;
+}
+@media (992px <= width) {
+  .p-firstview__aohigelogo {
+    margin-top: 5em;
+  }
+}
+@media (1200px <= width) {
+  .p-firstview__aohigelogo {
+    margin-top: 0;
+  }
 }
 .p-firstview__main_visual {
   width: 100%;
