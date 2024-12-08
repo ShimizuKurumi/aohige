@@ -75,10 +75,15 @@ small {
 }
 
 .wrapper {
-  width: 65%;
+  width: 90%;
   max-width: 604px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (768px <= width) {
+  .wrapper {
+    width: 65%;
+  }
 }
 
 a {

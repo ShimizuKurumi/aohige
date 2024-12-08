@@ -89,10 +89,14 @@ small {
 }
 
 .wrapper {
-    width: 65%;
+    width: 90%;
     max-width: 604px;
     margin-left: auto;
     margin-right: auto;
+
+    @include media(md) {
+        width: 65%;
+    }
 }
 
 a {
