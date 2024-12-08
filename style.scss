@@ -714,9 +714,9 @@ a {
         z-index: 3;
         margin-left: auto;
         margin-right: auto;
+        transform: translate3d(0, 0, 0);
         animation: 6s linear infinite rotation;
         mix-blend-mode: difference;
-        will-change: transform;
         translate: -50% 50%;
 
 
