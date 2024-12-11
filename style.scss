@@ -347,6 +347,7 @@ a {
 
         &__list {
             display: flex;
+            height: 100%;
 
             &:first-child {
                 margin-bottom: 8px;
@@ -714,8 +715,8 @@ a {
         z-index: 3;
         margin-left: auto;
         margin-right: auto;
-        transform: translate3d(0, 0, 0);
         translate: -50% 50%;
+        perspective: 1000;
         -webkit-animation: 6s linear infinite rotation;
         animation: 6s linear infinite rotation;
         mix-blend-mode: difference;
