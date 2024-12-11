@@ -756,7 +756,6 @@ a {
 }
 .p-introduction__bg {
   background-position: 60% 50%;
-  background-image: url("./images/aohige_intro.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 105%;
@@ -882,7 +881,6 @@ a {
   }
 }
 .p-story__img {
-  background-image: url("./images/aohige_story1.jpg");
   height: 120%;
   margin-inline: auto;
   width: 100%;
@@ -1608,7 +1606,7 @@ a {
   max-width: 80px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 4.5em;
+  margin-bottom: 5em;
 }
 .l-footer__logo-img {
   width: 100%;
