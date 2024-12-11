@@ -633,10 +633,10 @@ a {
   margin-left: auto;
   margin-right: auto;
   transform: translate3d(0, 0, 0);
-  -webkit-animation: 6s linear infinite rotation;
-          animation: 6s linear infinite rotation;
-  mix-blend-mode: difference;
   translate: -50% 50%;
+  -webkit-animation: 6s linear infinite rotation;
+  animation: 6s linear infinite rotation;
+  mix-blend-mode: difference;
 }
 @media (1200px <= width) {
   .p-firstview__circletext:hover ~ .p-firstview__main_visual--2 {
