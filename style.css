@@ -953,6 +953,7 @@ a {
   position: relative;
   padding: 6.25em 0 6.25em;
   z-index: 2;
+  background-image: url("./images/aohige_schedule.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1198,6 +1199,7 @@ a {
 
 .p-ticket {
   padding-bottom: 6.25em;
+  background-image: url("./images/ticketbg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1505,6 +1507,7 @@ a {
 .p-movie {
   padding: 6.25em 0 6.25em;
   position: relative;
+  background-image: url("./images/mable.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
