@@ -604,6 +604,7 @@ a {
   z-index: 0;
   margin-left: auto;
   margin-right: auto;
+  height: auto;
 }
 .p-firstview__main_visual__wrapper {
   position: relative;
