@@ -657,7 +657,7 @@ a {
     }
 
     &__aohigelogo {
-        max-width: 74px;
+        max-width: 100px;
         margin-left: auto;
         margin-right: auto;
         width: 18%;
@@ -686,7 +686,7 @@ a {
 
         &__wrapper {
             position: relative;
-            top: -13vh;
+            top: -17vh;
             width: fit-content;
             margin-left: auto;
             margin-right: auto;
@@ -1774,7 +1774,7 @@ a {
 //フッター------------------------------
 .l-footer {
     position: relative;
-    padding: 6.25em 0;
+    padding: 6em 0;
 
     @include media(lg) {
         padding: 10em 0;
@@ -1797,7 +1797,7 @@ a {
 
     &__logo {
         width: 20%;
-        max-width: 80px;
+        max-width: 100px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 5em;

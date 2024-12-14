@@ -578,7 +578,7 @@ a {
   margin-right: auto;
 }
 .p-firstview__aohigelogo {
-  max-width: 74px;
+  max-width: 100px;
   margin-left: auto;
   margin-right: auto;
   width: 18%;
@@ -608,7 +608,7 @@ a {
 }
 .p-firstview__main_visual__wrapper {
   position: relative;
-  top: -13vh;
+  top: -17vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1588,7 +1588,7 @@ a {
 
 .l-footer {
   position: relative;
-  padding: 6.25em 0;
+  padding: 6em 0;
   background-image: url("./images/footer.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -1611,7 +1611,7 @@ a {
 }
 .l-footer__logo {
   width: 20%;
-  max-width: 80px;
+  max-width: 100px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5em;
