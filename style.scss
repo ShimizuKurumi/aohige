@@ -719,11 +719,14 @@ a {
         z-index: 3;
         margin-left: auto;
         margin-right: auto;
-        translate: -50% 50%;
-        perspective: 1000;
-        -webkit-animation: 6s linear infinite rotation;
-        animation: 6s linear infinite rotation;
-        mix-blend-mode: difference;
+        transform: translate(-50%, 50%);
+
+        img {
+            width: 100%;
+            -webkit-animation: 6s linear infinite rotation;
+            animation: 6s linear infinite rotation;
+            mix-blend-mode: difference;
+        }
 
 
         @include media(xl) {
