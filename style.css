@@ -281,6 +281,8 @@ a {
   width: -moz-fit-content;
   width: fit-content;
   padding: 2px;
+}
+.c-detail__time__attention--pc {
   background-color: #0B1632;
 }
 .c-detail__credit {

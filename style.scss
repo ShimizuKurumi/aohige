@@ -317,7 +317,10 @@ a {
             margin-top: 16px;
             width: fit-content;
             padding: 2px;
-            background-color: $main-color;
+
+            &--pc {
+                background-color: $main-color;
+            }
         }
     }
 
