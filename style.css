@@ -1353,6 +1353,7 @@ a {
 }
 .p-ticket__relation__attention {
   margin-bottom: 40px;
+  line-height: 1.7;
 }
 .p-ticket table tbody {
   width: 100%;
