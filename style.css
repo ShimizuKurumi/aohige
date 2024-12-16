@@ -580,6 +580,10 @@ a {
   margin-right: auto;
 }
 .p-firstview__aohigelogo {
+  width: 100%;
+}
+.p-firstview__aohigelogo__wrapper {
+  position: relative;
   max-width: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -588,14 +592,25 @@ a {
   z-index: 3;
 }
 @media (992px <= width) {
-  .p-firstview__aohigelogo {
+  .p-firstview__aohigelogo__wrapper {
     margin-top: 5em;
   }
 }
 @media (1200px <= width) {
-  .p-firstview__aohigelogo {
+  .p-firstview__aohigelogo__wrapper {
     margin-top: 0;
   }
+}
+.p-firstview__aohigelogo--1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: eye1 step-end 5s infinite;
+          animation: eye1 step-end 5s infinite;
+}
+.p-firstview__aohigelogo--2 {
+  -webkit-animation: eye2 step-end 5s infinite;
+          animation: eye2 step-end 5s infinite;
 }
 .p-firstview__main_visual {
   width: 100%;
@@ -650,6 +665,63 @@ a {
   }
 }
 
+@-webkit-keyframes eye1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  53% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes eye1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  53% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes eye2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes eye2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .p-banner {
   margin-bottom: 6.25em;
   max-width: 604px;
