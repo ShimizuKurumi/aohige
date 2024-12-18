@@ -152,8 +152,8 @@ a {
   transform: translateX(-50%);
 }
 
-@media (1200px <= width) {
-  .mouse-over:hover ~ .p-firstview__main_visual__wrapper .p-firstview__main_visual--2 {
+@media (hover: hover) {
+  .mouse-over:hover:hover ~ .p-firstview__main_visual__wrapper .p-firstview__main_visual--2 {
     opacity: 1;
   }
 }
@@ -659,8 +659,8 @@ a {
   animation: 6s linear infinite rotation;
   mix-blend-mode: difference;
 }
-@media (1200px <= width) {
-  .p-firstview__circletext:hover ~ .p-firstview__main_visual--2 {
+@media (hover: hover) {
+  .p-firstview__circletext:hover:hover ~ .p-firstview__main_visual--2 {
     opacity: 1;
   }
 }

@@ -19,6 +19,14 @@ $breakpoints: (
     }
 }
 
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
 
 //基本--------------------------------------
@@ -169,11 +177,13 @@ a {
 //共通-------------------------------------------
 
 .mouse-over {
-    @include media(xl) {
+
+    @include hover {
         &:hover~.p-firstview__main_visual__wrapper .p-firstview__main_visual--2 {
             opacity: 1;
         }
     }
+
 }
 
 .c-button {
@@ -747,7 +757,7 @@ a {
         }
 
 
-        @include media(xl) {
+        @include hover {
             &:hover~.p-firstview__main_visual--2 {
                 opacity: 1;
             }
