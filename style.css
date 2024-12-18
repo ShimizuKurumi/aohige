@@ -541,9 +541,9 @@ a {
 }
 .p-firstview__time--pc {
   position: absolute;
-  top: 75%;
+  top: 47%;
   left: 50%;
-  translate: -450px -47vh;
+  translate: -450px -100px;
   z-index: 3;
 }
 .p-firstview__taigenlogo {
@@ -625,12 +625,27 @@ a {
 }
 .p-firstview__main_visual__wrapper {
   position: relative;
-  top: -17vh;
+  top: -30vw;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+}
+@media (768px <= width) {
+  .p-firstview__main_visual__wrapper {
+    top: -20vw;
+  }
+}
+@media (992px <= width) {
+  .p-firstview__main_visual__wrapper {
+    top: -15vw;
+  }
+}
+@media (1200px <= width) {
+  .p-firstview__main_visual__wrapper {
+    top: -15vh;
+  }
 }
 .p-firstview__main_visual--2 {
   position: absolute;

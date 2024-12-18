@@ -619,10 +619,10 @@ a {
     &__time {
         &--pc {
             position: absolute;
-            top: 75%;
+            top: 47%;
             left: 50%;
             // transform: translateX(-450px);
-            translate: -450px -47vh;
+            translate: -450px -100px;
             z-index: 3;
         }
     }
@@ -717,10 +717,22 @@ a {
 
         &__wrapper {
             position: relative;
-            top: -17vh;
+            top: -30vw;
             width: fit-content;
             margin-left: auto;
             margin-right: auto;
+
+            @include media(md) {
+                top: -20vw;
+            }
+
+            @include media(lg) {
+                top: -15vw;
+            }
+
+            @include media(xl) {
+                top: -15vh;
+            }
         }
 
         &--2 {
